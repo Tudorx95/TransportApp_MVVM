@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="WpfApp.VideoPlayerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="500" Width="2000"
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch">
+    <MediaElement x:Name="videoPlayer" LoadedBehavior="Manual" MediaEnded="VideoPlayer_MediaEnded" />
+
+</UserControl>

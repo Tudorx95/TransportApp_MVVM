@@ -1,0 +1,64 @@
+﻿<Window x:Class="WpfApp.Pupils_Free"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        xmlns:components="clr-namespace:WpfApp.Components"
+        mc:Ignorable="d"
+        Title="Pupils_Free" Height="604" Width="537">
+    <Grid Background="LightBlue" Margin="0,0,0,-6">
+        <!-- StackPanel for layout -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- TextBlock for Title -->
+            <TextBlock Text="Pupils Facilities Free" 
+                   FontSize="24" 
+                   FontWeight="Bold" 
+                   Foreground="DarkBlue" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,10,0,20"/>
+
+            <!-- Placeholder for descriptive text -->
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Height="180" Width="423">
+                <TextBox TextWrapping="Wrap" IsReadOnly="True" Background="White" BorderBrush="Transparent" 
+         FontSize="16" FontFamily="Georgia" Padding="10" TextAlignment="Center">
+                    <TextBox.Text>
+                        <![CDATA[
+
+At MTC, we are proud to offer free transportation facilities for school pupils, ensuring they can travel safely and conveniently without financial burden. Here’s how we support young learners:
+
+1. **Free Bus Passes**  
+   - Pupils up to a certain grade level are eligible for free bus passes, which can be used for unlimited rides to and from school.
+
+2. **Dedicated School Routes**  
+   - Specially designed routes to cover schools across the city, ensuring timely and safe transport for pupils.
+
+3. **Safety First**  
+   - All buses for pupils are equipped with CCTV, GPS tracking, and trained staff to ensure the highest level of safety and security.
+
+4. **Digital Pass Management**  
+   - Parents and guardians can manage free passes through our app, allowing real-time tracking and seamless renewal.
+
+5. **Inclusive Facilities**  
+   - Our buses are accessible to pupils with special needs, providing ramps, priority seating, and other support.
+
+**How to Avail Free Facilities?**  
+- Register your child through our app or at the nearest MTC office.  
+- Provide proof of enrollment in a recognized school.  
+- Collect the free bus pass and enjoy hassle-free commuting!  
+
+Let’s make education more accessible with free transportation for pupils. Together, we’re building a brighter future!
+                        ]]>
+                    </TextBox.Text>
+                </TextBox>
+            </ScrollViewer>
+
+            <!-- Placeholder for an image -->
+            <Image Source="{Binding Source={x:Static components:Resource.Pupils_Facilities}}" 
+               Width="300" 
+               Height="200" 
+               HorizontalAlignment="Center" 
+               Margin="0,20,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,65 @@
+﻿<Window x:Class="WpfApp.StudentFacilities"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        xmlns:components="clr-namespace:WpfApp.Components"
+        mc:Ignorable="d"
+        Title="StudentFacilities" Height="463" Width="530">
+    <Grid Background="LightBlue" Margin="0,0,0,-6">
+        <!-- StackPanel for layout -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- TextBlock for Title -->
+            <TextBlock Text="Student Facilities" 
+                       FontSize="24" 
+                       FontWeight="Bold" 
+                       Foreground="DarkBlue" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,10,0,20"/>
+
+            <!-- Placeholder for descriptive text -->
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Height="69" Width="423">
+                <TextBox TextWrapping="Wrap" IsReadOnly="True" Background="White" BorderBrush="Transparent" 
+             FontSize="16" FontFamily="Georgia" Padding="10" TextAlignment="Center">
+                    <TextBox.Text>
+                        <![CDATA[
+
+            At MTC, we believe in supporting students by providing accessible and affordable public transport options. Here are some exclusive facilities designed for students:
+
+            1. Discounted Fares
+               - Students can enjoy reduced ticket prices on all bus and train routes by registering with a valid student ID. Save more while commuting to school or college.
+
+            2. Monthly and Annual Passes
+               - Special subscription options tailored for students, including:
+                 - Monthly Passes for unlimited rides.
+                 - Semester and Annual Subscriptions for hassle-free travel throughout the academic year.
+
+            3. Dedicated Student Helpline
+               - Get support for all transport-related queries. Our dedicated helpline is available to assist students with travel planning and ticket purchases.
+
+            4. Eco-Friendly Travel
+               - Join our green initiative! Students can opt for digital tickets and passes, reducing paper waste and supporting sustainable practices.
+
+            5. Campus Shuttle Services
+               - Exclusive shuttle services for partnered colleges and universities, ensuring safe and convenient travel to and from campus.
+
+            How to Access These Facilities?
+            - Download the app and create an account using your student credentials.
+            - Verify your student status to unlock discounts and offers.
+            - Choose a subscription that suits your needs, or buy single tickets directly through the app.
+            ]]>
+                    </TextBox.Text>
+                </TextBox>
+            </ScrollViewer>
+
+
+            <!-- Placeholder for an image -->
+            <Image Source="{Binding Source={x:Static components:Resource.Student_Facilities}}" 
+                   Width="300" 
+                   Height="200" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,20,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

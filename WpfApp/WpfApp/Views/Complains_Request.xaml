@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp.Complains_Request"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="Complain Request" Height="484" Width="806">
+    <Grid Margin="20,20,27,13" Background="LightBlue">
+        <!-- Title -->
+        <TextBlock Text="Complain Request" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,20,0,40"/>
+
+        <!-- ComboBox for selecting service -->
+        <TextBlock Text="Select the service to complain about:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,70,0,0" />
+        <ComboBox x:Name="ServiceComboBox" Width="300" Margin="0,100,0,273" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <ComboBoxItem Content="Bus Service"/>
+            <ComboBoxItem Content="Tram Service"/>
+            <ComboBoxItem Content="Trolleybus"/>
+            <ComboBoxItem Content="Subway"/>
+        </ComboBox>
+
+        <!-- TextBox for the complain message -->
+        <TextBlock Text="Enter your complaint:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0"/>
+        <TextBox x:Name="ComplainTextBox" Width="600" Height="150" Margin="0,180,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" AcceptsReturn="True" TextWrapping="Wrap" FontSize="16" Text=""/>
+
+        <!-- Button to submit the complaint -->
+        <Button Content="Send Complaint" Width="200" Height="21" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="278,0,0,19" Click="SendComplaintButton_Click"/>
+    </Grid>
+</Window>
