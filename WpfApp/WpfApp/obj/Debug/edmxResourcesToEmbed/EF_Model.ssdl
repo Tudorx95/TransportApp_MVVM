@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TransportDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Angajat">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="salariu" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="id_persoana" Type="int" Nullable="false" />
+    <Property Name="tip_angajat" Type="int" Nullable="false" />
+    <Property Name="data_angajarii" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bilet">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tip_bilet" Type="int" Nullable="false" />
+    <Property Name="valabilitate" Type="date" Nullable="false" />
+    <Property Name="id_calator" Type="int" Nullable="false" />
+    <Property Name="nr_bilete" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Complaint">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_user" Type="int" Nullable="false" />
+    <Property Name="text_plangere" Type="varchar" MaxLength="1200" />
+    <Property Name="id_tip_MTC" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Coordonate_Statie">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_statie" Type="int" />
+    <Property Name="coord_X" Type="int" Nullable="false" />
+    <Property Name="coord_Y" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MT">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_tip" Type="int" Nullable="false" />
+    <Property Name="nr_traseu" Type="int" Nullable="false" />
+    <Property Name="nr_inmatriculare" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="id_sofer" Type="int" Nullable="false" />
+    <Property Name="numar_mt" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Persoana">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tip_persoana" Type="int" Nullable="false" />
+    <Property Name="nume" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="prenume" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CNP" Type="char" MaxLength="13" />
+    <Property Name="adresa" Type="nvarchar" MaxLength="200" />
+    <Property Name="email" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Statie">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" Nullable="false" />
+    <Property Name="id_traseu" Type="int" Nullable="false" />
+    <Property Name="id_tip_statie" Type="int" Nullable="false" />
+    <Property Name="ore" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tip_Angajat">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nume" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tip_Bilet">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nume" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tip_Statie">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" Nullable="false" />
+    <Property Name="nume" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tip_User">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nume" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipMT">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nume" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Traseu">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nume" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_persoana" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Coordonat__id_st__41EDCAC5">
+    <End Role="Tip_Statie" Type="Self.Tip_Statie" Multiplicity="0..1" />
+    <End Role="Coordonate_Statie" Type="Self.Coordonate_Statie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tip_Statie">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Coordonate_Statie">
+        <PropertyRef Name="id_statie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persoana_Angajat">
+    <End Role="Persoana" Type="Self.Persoana" Multiplicity="1" />
+    <End Role="Angajat" Type="Self.Angajat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persoana">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Angajat">
+        <PropertyRef Name="id_persoana" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persoana_User">
+    <End Role="Persoana" Type="Self.Persoana" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persoana">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="id_persoana" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sofer_MT">
+    <End Role="Angajat" Type="Self.Angajat" Multiplicity="1" />
+    <End Role="MT" Type="Self.MT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Angajat">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="MT">
+        <PropertyRef Name="id_sofer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipAngajat_Angajat">
+    <End Role="Tip_Angajat" Type="Self.Tip_Angajat" Multiplicity="1" />
+    <End Role="Angajat" Type="Self.Angajat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tip_Angajat">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Angajat">
+        <PropertyRef Name="tip_angajat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipBilet_Bilet">
+    <End Role="Tip_Bilet" Type="Self.Tip_Bilet" Multiplicity="1" />
+    <End Role="Bilet" Type="Self.Bilet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tip_Bilet">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Bilet">
+        <PropertyRef Name="tip_bilet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipMT">
+    <End Role="TipMT" Type="Self.TipMT" Multiplicity="1" />
+    <End Role="Complaint" Type="Self.Complaint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipMT">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Complaint">
+        <PropertyRef Name="id_tip_MTC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipMT_MT">
+    <End Role="TipMT" Type="Self.TipMT" Multiplicity="1" />
+    <End Role="MT" Type="Self.MT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipMT">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="MT">
+        <PropertyRef Name="id_tip" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipUser_Persoana">
+    <End Role="Tip_User" Type="Self.Tip_User" Multiplicity="1" />
+    <End Role="Persoana" Type="Self.Persoana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tip_User">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Persoana">
+        <PropertyRef Name="tip_persoana" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Traseu_MT">
+    <End Role="Traseu" Type="Self.Traseu" Multiplicity="1" />
+    <End Role="MT" Type="Self.MT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Traseu">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="MT">
+        <PropertyRef Name="nr_traseu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Traseu_Statie">
+    <End Role="Traseu" Type="Self.Traseu" Multiplicity="1" />
+    <End Role="Statie" Type="Self.Statie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Traseu">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Statie">
+        <PropertyRef Name="id_traseu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Traseu_Tip_Statie">
+    <End Role="Tip_Statie" Type="Self.Tip_Statie" Multiplicity="1" />
+    <End Role="Statie" Type="Self.Statie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tip_Statie">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Statie">
+        <PropertyRef Name="id_tip_statie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Complaint" Type="Self.Complaint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Complaint">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Bilet">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Bilet" Type="Self.Bilet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Bilet">
+        <PropertyRef Name="id_calator" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="TransportDBModelStoreContainer">
+    <EntitySet Name="Angajat" EntityType="Self.Angajat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bilet" EntityType="Self.Bilet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Complaint" EntityType="Self.Complaint" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Coordonate_Statie" EntityType="Self.Coordonate_Statie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MT" EntityType="Self.MT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persoana" EntityType="Self.Persoana" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Statie" EntityType="Self.Statie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tip_Angajat" EntityType="Self.Tip_Angajat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tip_Bilet" EntityType="Self.Tip_Bilet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tip_Statie" EntityType="Self.Tip_Statie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tip_User" EntityType="Self.Tip_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipMT" EntityType="Self.TipMT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Traseu" EntityType="Self.Traseu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Coordonat__id_st__41EDCAC5" Association="Self.FK__Coordonat__id_st__41EDCAC5">
+      <End Role="Tip_Statie" EntitySet="Tip_Statie" />
+      <End Role="Coordonate_Statie" EntitySet="Coordonate_Statie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persoana_Angajat" Association="Self.FK_Persoana_Angajat">
+      <End Role="Persoana" EntitySet="Persoana" />
+      <End Role="Angajat" EntitySet="Angajat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persoana_User" Association="Self.FK_Persoana_User">
+      <End Role="Persoana" EntitySet="Persoana" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sofer_MT" Association="Self.FK_Sofer_MT">
+      <End Role="Angajat" EntitySet="Angajat" />
+      <End Role="MT" EntitySet="MT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipAngajat_Angajat" Association="Self.FK_TipAngajat_Angajat">
+      <End Role="Tip_Angajat" EntitySet="Tip_Angajat" />
+      <End Role="Angajat" EntitySet="Angajat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipBilet_Bilet" Association="Self.FK_TipBilet_Bilet">
+      <End Role="Tip_Bilet" EntitySet="Tip_Bilet" />
+      <End Role="Bilet" EntitySet="Bilet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipMT" Association="Self.FK_TipMT">
+      <End Role="TipMT" EntitySet="TipMT" />
+      <End Role="Complaint" EntitySet="Complaint" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipMT_MT" Association="Self.FK_TipMT_MT">
+      <End Role="TipMT" EntitySet="TipMT" />
+      <End Role="MT" EntitySet="MT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipUser_Persoana" Association="Self.FK_TipUser_Persoana">
+      <End Role="Tip_User" EntitySet="Tip_User" />
+      <End Role="Persoana" EntitySet="Persoana" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Traseu_MT" Association="Self.FK_Traseu_MT">
+      <End Role="Traseu" EntitySet="Traseu" />
+      <End Role="MT" EntitySet="MT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Traseu_Statie" Association="Self.FK_Traseu_Statie">
+      <End Role="Traseu" EntitySet="Traseu" />
+      <End Role="Statie" EntitySet="Statie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Traseu_Tip_Statie" Association="Self.FK_Traseu_Tip_Statie">
+      <End Role="Tip_Statie" EntitySet="Tip_Statie" />
+      <End Role="Statie" EntitySet="Statie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User" Association="Self.FK_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Complaint" EntitySet="Complaint" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Bilet" Association="Self.FK_User_Bilet">
+      <End Role="User" EntitySet="User" />
+      <End Role="Bilet" EntitySet="Bilet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

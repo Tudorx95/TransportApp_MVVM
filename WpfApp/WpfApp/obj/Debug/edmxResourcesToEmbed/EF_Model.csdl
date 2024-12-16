@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TransportDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Angajat">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="salariu" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="id_persoana" Type="Int32" Nullable="false" />
+    <Property Name="tip_angajat" Type="Int32" Nullable="false" />
+    <Property Name="data_angajarii" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Persoana" Relationship="Self.FK_Persoana_Angajat" FromRole="Angajat" ToRole="Persoana" />
+    <NavigationProperty Name="MTs" Relationship="Self.FK_Sofer_MT" FromRole="Angajat" ToRole="MT" />
+    <NavigationProperty Name="Tip_Angajat1" Relationship="Self.FK_TipAngajat_Angajat" FromRole="Angajat" ToRole="Tip_Angajat" />
+  </EntityType>
+  <EntityType Name="Bilet">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tip_bilet" Type="Int32" Nullable="false" />
+    <Property Name="valabilitate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="id_calator" Type="Int32" Nullable="false" />
+    <Property Name="nr_bilete" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Tip_Bilet1" Relationship="Self.FK_TipBilet_Bilet" FromRole="Bilet" ToRole="Tip_Bilet" />
+    <NavigationProperty Name="User" Relationship="Self.FK_User_Bilet" FromRole="Bilet" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Complaint">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_user" Type="Int32" Nullable="false" />
+    <Property Name="text_plangere" Type="String" MaxLength="1200" FixedLength="false" Unicode="false" />
+    <Property Name="id_tip_MTC" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TipMT" Relationship="Self.FK_TipMT" FromRole="Complaint" ToRole="TipMT" />
+    <NavigationProperty Name="User" Relationship="Self.FK_User" FromRole="Complaint" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Coordonate_Statie">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_statie" Type="Int32" />
+    <Property Name="coord_X" Type="Int32" Nullable="false" />
+    <Property Name="coord_Y" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Tip_Statie" Relationship="Self.FK__Coordonat__id_st__41EDCAC5" FromRole="Coordonate_Statie" ToRole="Tip_Statie" />
+  </EntityType>
+  <EntityType Name="MT">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_tip" Type="Int32" Nullable="false" />
+    <Property Name="nr_traseu" Type="Int32" Nullable="false" />
+    <Property Name="nr_inmatriculare" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_sofer" Type="Int32" Nullable="false" />
+    <Property Name="numar_mt" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Angajat" Relationship="Self.FK_Sofer_MT" FromRole="MT" ToRole="Angajat" />
+    <NavigationProperty Name="TipMT" Relationship="Self.FK_TipMT_MT" FromRole="MT" ToRole="TipMT" />
+    <NavigationProperty Name="Traseu" Relationship="Self.FK_Traseu_MT" FromRole="MT" ToRole="Traseu" />
+  </EntityType>
+  <EntityType Name="Persoana">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tip_persoana" Type="Int32" Nullable="false" />
+    <Property Name="nume" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="prenume" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CNP" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="adresa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Angajats" Relationship="Self.FK_Persoana_Angajat" FromRole="Persoana" ToRole="Angajat" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Persoana_User" FromRole="Persoana" ToRole="User" />
+    <NavigationProperty Name="Tip_User" Relationship="Self.FK_TipUser_Persoana" FromRole="Persoana" ToRole="Tip_User" />
+  </EntityType>
+  <EntityType Name="Statie">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" />
+    <Property Name="id_traseu" Type="Int32" Nullable="false" />
+    <Property Name="id_tip_statie" Type="Int32" Nullable="false" />
+    <Property Name="ore" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Traseu" Relationship="Self.FK_Traseu_Statie" FromRole="Statie" ToRole="Traseu" />
+    <NavigationProperty Name="Tip_Statie" Relationship="Self.FK_Traseu_Tip_Statie" FromRole="Statie" ToRole="Tip_Statie" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tip_Angajat">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nume" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Angajats" Relationship="Self.FK_TipAngajat_Angajat" FromRole="Tip_Angajat" ToRole="Angajat" />
+  </EntityType>
+  <EntityType Name="Tip_Bilet">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nume" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Bilets" Relationship="Self.FK_TipBilet_Bilet" FromRole="Tip_Bilet" ToRole="Bilet" />
+  </EntityType>
+  <EntityType Name="Tip_Statie">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" />
+    <Property Name="nume" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Coordonate_Statie" Relationship="Self.FK__Coordonat__id_st__41EDCAC5" FromRole="Tip_Statie" ToRole="Coordonate_Statie" />
+    <NavigationProperty Name="Staties" Relationship="Self.FK_Traseu_Tip_Statie" FromRole="Tip_Statie" ToRole="Statie" />
+  </EntityType>
+  <EntityType Name="Tip_User">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nume" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Persoanas" Relationship="Self.FK_TipUser_Persoana" FromRole="Tip_User" ToRole="Persoana" />
+  </EntityType>
+  <EntityType Name="TipMT">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nume" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Complaints" Relationship="Self.FK_TipMT" FromRole="TipMT" ToRole="Complaint" />
+    <NavigationProperty Name="MTs" Relationship="Self.FK_TipMT_MT" FromRole="TipMT" ToRole="MT" />
+  </EntityType>
+  <EntityType Name="Traseu">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nume" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MTs" Relationship="Self.FK_Traseu_MT" FromRole="Traseu" ToRole="MT" />
+    <NavigationProperty Name="Staties" Relationship="Self.FK_Traseu_Statie" FromRole="Traseu" ToRole="Statie" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id_unic" />
+    </Key>
+    <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_persoana" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bilets" Relationship="Self.FK_User_Bilet" FromRole="User" ToRole="Bilet" />
+    <NavigationProperty Name="Complaints" Relationship="Self.FK_User" FromRole="User" ToRole="Complaint" />
+    <NavigationProperty Name="Persoana" Relationship="Self.FK_Persoana_User" FromRole="User" ToRole="Persoana" />
+  </EntityType>
+  <Association Name="FK_Persoana_Angajat">
+    <End Role="Persoana" Type="Self.Persoana" Multiplicity="1" />
+    <End Role="Angajat" Type="Self.Angajat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persoana">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Angajat">
+        <PropertyRef Name="id_persoana" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sofer_MT">
+    <End Role="Angajat" Type="Self.Angajat" Multiplicity="1" />
+    <End Role="MT" Type="Self.MT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Angajat">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="MT">
+        <PropertyRef Name="id_sofer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipAngajat_Angajat">
+    <End Role="Tip_Angajat" Type="Self.Tip_Angajat" Multiplicity="1" />
+    <End Role="Angajat" Type="Self.Angajat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tip_Angajat">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Angajat">
+        <PropertyRef Name="tip_angajat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipBilet_Bilet">
+    <End Role="Tip_Bilet" Type="Self.Tip_Bilet" Multiplicity="1" />
+    <End Role="Bilet" Type="Self.Bilet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tip_Bilet">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Bilet">
+        <PropertyRef Name="tip_bilet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Bilet">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Bilet" Type="Self.Bilet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Bilet">
+        <PropertyRef Name="id_calator" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipMT">
+    <End Role="TipMT" Type="Self.TipMT" Multiplicity="1" />
+    <End Role="Complaint" Type="Self.Complaint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipMT">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Complaint">
+        <PropertyRef Name="id_tip_MTC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Complaint" Type="Self.Complaint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Complaint">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Coordonat__id_st__41EDCAC5">
+    <End Role="Tip_Statie" Type="Self.Tip_Statie" Multiplicity="0..1" />
+    <End Role="Coordonate_Statie" Type="Self.Coordonate_Statie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tip_Statie">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Coordonate_Statie">
+        <PropertyRef Name="id_statie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipMT_MT">
+    <End Role="TipMT" Type="Self.TipMT" Multiplicity="1" />
+    <End Role="MT" Type="Self.MT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipMT">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="MT">
+        <PropertyRef Name="id_tip" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Traseu_MT">
+    <End Role="Traseu" Type="Self.Traseu" Multiplicity="1" />
+    <End Role="MT" Type="Self.MT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Traseu">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="MT">
+        <PropertyRef Name="nr_traseu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persoana_User">
+    <End Role="Persoana" Type="Self.Persoana" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persoana">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="id_persoana" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipUser_Persoana">
+    <End Role="Tip_User" Type="Self.Tip_User" Multiplicity="1" />
+    <End Role="Persoana" Type="Self.Persoana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tip_User">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Persoana">
+        <PropertyRef Name="tip_persoana" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Traseu_Statie">
+    <End Role="Traseu" Type="Self.Traseu" Multiplicity="1" />
+    <End Role="Statie" Type="Self.Statie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Traseu">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Statie">
+        <PropertyRef Name="id_traseu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Traseu_Tip_Statie">
+    <End Role="Tip_Statie" Type="Self.Tip_Statie" Multiplicity="1" />
+    <End Role="Statie" Type="Self.Statie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tip_Statie">
+        <PropertyRef Name="id_unic" />
+      </Principal>
+      <Dependent Role="Statie">
+        <PropertyRef Name="id_tip_statie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TransportDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Angajats" EntityType="Self.Angajat" />
+    <EntitySet Name="Bilets" EntityType="Self.Bilet" />
+    <EntitySet Name="Complaints" EntityType="Self.Complaint" />
+    <EntitySet Name="Coordonate_Statie" EntityType="Self.Coordonate_Statie" />
+    <EntitySet Name="MTs" EntityType="Self.MT" />
+    <EntitySet Name="Persoanas" EntityType="Self.Persoana" />
+    <EntitySet Name="Staties" EntityType="Self.Statie" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Tip_Angajat" EntityType="Self.Tip_Angajat" />
+    <EntitySet Name="Tip_Bilet" EntityType="Self.Tip_Bilet" />
+    <EntitySet Name="Tip_Statie" EntityType="Self.Tip_Statie" />
+    <EntitySet Name="Tip_User" EntityType="Self.Tip_User" />
+    <EntitySet Name="TipMTs" EntityType="Self.TipMT" />
+    <EntitySet Name="Traseus" EntityType="Self.Traseu" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Persoana_Angajat" Association="Self.FK_Persoana_Angajat">
+      <End Role="Persoana" EntitySet="Persoanas" />
+      <End Role="Angajat" EntitySet="Angajats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sofer_MT" Association="Self.FK_Sofer_MT">
+      <End Role="Angajat" EntitySet="Angajats" />
+      <End Role="MT" EntitySet="MTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipAngajat_Angajat" Association="Self.FK_TipAngajat_Angajat">
+      <End Role="Tip_Angajat" EntitySet="Tip_Angajat" />
+      <End Role="Angajat" EntitySet="Angajats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipBilet_Bilet" Association="Self.FK_TipBilet_Bilet">
+      <End Role="Tip_Bilet" EntitySet="Tip_Bilet" />
+      <End Role="Bilet" EntitySet="Bilets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Bilet" Association="Self.FK_User_Bilet">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Bilet" EntitySet="Bilets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipMT" Association="Self.FK_TipMT">
+      <End Role="TipMT" EntitySet="TipMTs" />
+      <End Role="Complaint" EntitySet="Complaints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User" Association="Self.FK_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Complaint" EntitySet="Complaints" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Coordonat__id_st__41EDCAC5" Association="Self.FK__Coordonat__id_st__41EDCAC5">
+      <End Role="Tip_Statie" EntitySet="Tip_Statie" />
+      <End Role="Coordonate_Statie" EntitySet="Coordonate_Statie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipMT_MT" Association="Self.FK_TipMT_MT">
+      <End Role="TipMT" EntitySet="TipMTs" />
+      <End Role="MT" EntitySet="MTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Traseu_MT" Association="Self.FK_Traseu_MT">
+      <End Role="Traseu" EntitySet="Traseus" />
+      <End Role="MT" EntitySet="MTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persoana_User" Association="Self.FK_Persoana_User">
+      <End Role="Persoana" EntitySet="Persoanas" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipUser_Persoana" Association="Self.FK_TipUser_Persoana">
+      <End Role="Tip_User" EntitySet="Tip_User" />
+      <End Role="Persoana" EntitySet="Persoanas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Traseu_Statie" Association="Self.FK_Traseu_Statie">
+      <End Role="Traseu" EntitySet="Traseus" />
+      <End Role="Statie" EntitySet="Staties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Traseu_Tip_Statie" Association="Self.FK_Traseu_Tip_Statie">
+      <End Role="Tip_Statie" EntitySet="Tip_Statie" />
+      <End Role="Statie" EntitySet="Staties" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(TransportDBModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(TransportDBModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

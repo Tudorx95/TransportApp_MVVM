@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TransportDBModelStoreContainer" CdmEntityContainer="TransportDBEntities">
+    <EntitySetMapping Name="Angajats">
+      <EntityTypeMapping TypeName="TransportDBModel.Angajat">
+        <MappingFragment StoreEntitySet="Angajat">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="salariu" ColumnName="salariu" />
+          <ScalarProperty Name="id_persoana" ColumnName="id_persoana" />
+          <ScalarProperty Name="tip_angajat" ColumnName="tip_angajat" />
+          <ScalarProperty Name="data_angajarii" ColumnName="data_angajarii" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bilets">
+      <EntityTypeMapping TypeName="TransportDBModel.Bilet">
+        <MappingFragment StoreEntitySet="Bilet">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="tip_bilet" ColumnName="tip_bilet" />
+          <ScalarProperty Name="valabilitate" ColumnName="valabilitate" />
+          <ScalarProperty Name="id_calator" ColumnName="id_calator" />
+          <ScalarProperty Name="nr_bilete" ColumnName="nr_bilete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Complaints">
+      <EntityTypeMapping TypeName="TransportDBModel.Complaint">
+        <MappingFragment StoreEntitySet="Complaint">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="text_plangere" ColumnName="text_plangere" />
+          <ScalarProperty Name="id_tip_MTC" ColumnName="id_tip_MTC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Coordonate_Statie">
+      <EntityTypeMapping TypeName="TransportDBModel.Coordonate_Statie">
+        <MappingFragment StoreEntitySet="Coordonate_Statie">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="id_statie" ColumnName="id_statie" />
+          <ScalarProperty Name="coord_X" ColumnName="coord_X" />
+          <ScalarProperty Name="coord_Y" ColumnName="coord_Y" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MTs">
+      <EntityTypeMapping TypeName="TransportDBModel.MT">
+        <MappingFragment StoreEntitySet="MT">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="id_tip" ColumnName="id_tip" />
+          <ScalarProperty Name="nr_traseu" ColumnName="nr_traseu" />
+          <ScalarProperty Name="nr_inmatriculare" ColumnName="nr_inmatriculare" />
+          <ScalarProperty Name="id_sofer" ColumnName="id_sofer" />
+          <ScalarProperty Name="numar_mt" ColumnName="numar_mt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persoanas">
+      <EntityTypeMapping TypeName="TransportDBModel.Persoana">
+        <MappingFragment StoreEntitySet="Persoana">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="tip_persoana" ColumnName="tip_persoana" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+          <ScalarProperty Name="prenume" ColumnName="prenume" />
+          <ScalarProperty Name="CNP" ColumnName="CNP" />
+          <ScalarProperty Name="adresa" ColumnName="adresa" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staties">
+      <EntityTypeMapping TypeName="TransportDBModel.Statie">
+        <MappingFragment StoreEntitySet="Statie">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="id_traseu" ColumnName="id_traseu" />
+          <ScalarProperty Name="id_tip_statie" ColumnName="id_tip_statie" />
+          <ScalarProperty Name="ore" ColumnName="ore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TransportDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tip_Angajat">
+      <EntityTypeMapping TypeName="TransportDBModel.Tip_Angajat">
+        <MappingFragment StoreEntitySet="Tip_Angajat">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tip_Bilet">
+      <EntityTypeMapping TypeName="TransportDBModel.Tip_Bilet">
+        <MappingFragment StoreEntitySet="Tip_Bilet">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tip_Statie">
+      <EntityTypeMapping TypeName="TransportDBModel.Tip_Statie">
+        <MappingFragment StoreEntitySet="Tip_Statie">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tip_User">
+      <EntityTypeMapping TypeName="TransportDBModel.Tip_User">
+        <MappingFragment StoreEntitySet="Tip_User">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipMTs">
+      <EntityTypeMapping TypeName="TransportDBModel.TipMT">
+        <MappingFragment StoreEntitySet="TipMT">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Traseus">
+      <EntityTypeMapping TypeName="TransportDBModel.Traseu">
+        <MappingFragment StoreEntitySet="Traseu">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="TransportDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="id_unic" ColumnName="id_unic" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="id_persoana" ColumnName="id_persoana" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="TransportDBModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="TransportDBModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="TransportDBModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="TransportDBModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportDBModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="TransportDBModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportDBModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="TransportDBModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="TransportDBModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>
