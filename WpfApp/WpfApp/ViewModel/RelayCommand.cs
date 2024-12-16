@@ -11,8 +11,14 @@ namespace WpfApp.ViewModel
     {
         private readonly Action _execute;
         private readonly Func<bool> _canExecute;
+        private Action<object> sendComplaint;
 
         public RelayCommand(Action execute) : this(execute, null) { }
+
+        public RelayCommand(Action<object> sendComplaint)
+        {
+            this.sendComplaint = sendComplaint;
+        }
 
         public RelayCommand(Action execute, Func<bool> canExecute)
         {

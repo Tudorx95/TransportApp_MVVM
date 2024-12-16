@@ -80,6 +80,8 @@
     <Compile Include="Complaint.cs">
       <DependentUpon>EF_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Components\NavigationHelper.cs" />
+    <Compile Include="Components\PasswordBoxHelper.cs" />
     <Compile Include="Coordonate_Statie.cs">
       <DependentUpon>EF_Model.tt</DependentUpon>
     </Compile>
@@ -88,6 +90,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EF_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Complains_RequestModel.cs" />
+    <Compile Include="Model\HomeModel.cs" />
+    <Compile Include="Model\LoginModel.cs" />
+    <Compile Include="Model\MainWindowModel.cs" />
+    <Compile Include="Model\NavigationBarModel.cs" />
+    <Compile Include="Model\Pupils_FreeModel.cs" />
+    <Compile Include="Model\RegisterModel.cs" />
+    <Compile Include="Model\SearchModel.cs" />
+    <Compile Include="Model\SearchRouteModel.cs" />
+    <Compile Include="Model\StudentFacilitiesModel.cs" />
+    <Compile Include="Model\Ticket_Subscription_InfoModel.cs" />
+    <Compile Include="Model\VideoPlayerControlModel.cs" />
     <Compile Include="MT.cs">
       <DependentUpon>EF_Model.tt</DependentUpon>
     </Compile>
@@ -127,6 +141,20 @@
     <Compile Include="User.cs">
       <DependentUpon>EF_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\Complains_RequestViewModel.cs" />
+    <Compile Include="ViewModel\HomeViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\NavigationBarViewModel.cs" />
+    <Compile Include="ViewModel\Pupils_FreeViewModel.cs" />
+    <Compile Include="ViewModel\RegisterViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\SearchRouteViewModel.cs" />
+    <Compile Include="ViewModel\SearchViewModel.cs" />
+    <Compile Include="ViewModel\StudentFacilitiesViewModel.cs" />
+    <Compile Include="ViewModel\Ticket_Subscription_InfoViewModel.cs" />
+    <Compile Include="ViewModel\VideoPlayerControlViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\DB_Connect.cs" />
@@ -186,10 +214,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="EF_Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

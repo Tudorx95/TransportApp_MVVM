@@ -65,5 +65,30 @@ namespace WpfApp.Components
                 MessageBox.Show("Incorrect Password!");
             return false;
         }
+        static public bool IsUsernameUnique(string username)
+        {
+            var context = new TransportDBEntities();
+            var user = context.Users.FirstOrDefault(p => p.username == username);
+            if (user != null)
+                return false;
+            return true;
+        }
+        public static bool RegisterUser(string firstName, string lastName, string email, string username, string password)
+        {
+            if (!Person.Add_Persoana(firstName, lastName, email))
+                return false;
+            
+            int id_pers = Person.GetPersonID(firstName, lastName, email);
+
+            if (id_pers != -1 && ServiceUser.AddUser(username, password, id_pers) == true)
+            {
+                MessageBox.Show("Registration successfully!");
+                NavigationHelper.NavigateTo(typeof(Login));
+                return true;
+            }
+            Person.DeletePerson(firstName, lastName, email);
+            MessageBox.Show("Registration failed due to some reasons!");
+            return false;
+        }
     }
 }

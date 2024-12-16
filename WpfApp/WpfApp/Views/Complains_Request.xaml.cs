@@ -25,11 +25,12 @@ namespace WpfApp
         {
             InitializeComponent();
         }
+
         //private void SendComplaintButton_Click(object sender, RoutedEventArgs e)
         //{
         //    string username = ServiceUser.LoginDetails.FirstOrDefault().ToString();
         //    string password = ServiceUser.LoginDetails.FirstOrDefault().ToString();
-        //    if(username=="" || password=="")
+        //    if (username == "" || password == "")
         //    {
         //        MessageBox.Show("Please log in before you submit any complain!");
         //        return;
@@ -48,18 +49,18 @@ namespace WpfApp
         //    }
         //    int id_user = ServiceUser.getUserID();
         //    int id_mtc = MTC.Get_MTC_Type(selectedService);
-        //    if(id_user == -1)
-        //    { 
-        //        MessageBox.Show($"You must log in to send a complaint!"); 
+        //    if (id_user == -1)
+        //    {
+        //        MessageBox.Show($"You must log in to send a complaint!");
         //        return;
         //    }
-        //    Insert_Complain(id_user,complainMessage,id_mtc,selectedService);
+        //    Insert_Complain(id_user, complainMessage, id_mtc, selectedService);
 
         //    // Optionally clear the fields after submission
         //    ServiceComboBox.SelectedIndex = -1;
         //    ComplainTextBox.Clear();
         //}
-        //public void Insert_Complain(int id_user,string text,int id_MTC_type,string selectedService)
+        //public void Insert_Complain(int id_user, string text, int id_MTC_type, string selectedService)
         //{
         //    var context = new DataClasses1DataContext();
         //    try

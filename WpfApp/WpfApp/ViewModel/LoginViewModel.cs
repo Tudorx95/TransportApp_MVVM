@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using WpfApp.Components;
@@ -47,23 +48,18 @@ namespace WpfApp.ViewModel
 
         private void LoginButton()
         {
-            // Implement login logic here
-            // Example: if (ServiceUser.Exist_User(Username, Password)) { ... }
-            string username = _username;
-            string password = _password;
-
-            //string encryptedPassword = Crypt.Encrypt(password);
-            // verify the integrity of the password
+            string username = Username;
+            string password = Password;
 
             if (ServiceUser.Exist_User(username, password))
             {
                 // set connected state to true
-                Login.connected = true;
+                LoginModel.Connected= true;
                 // navigate to search window
                 MainWindow mainWindow = new MainWindow();
                 Dictionary<string, string> newLoginDetails = new Dictionary<string, string> { { username, password } };
                 ServiceUser.LoginDetails = newLoginDetails;
-                NavigationBar.NavigateTo(typeof(Search));
+                NavigationHelper.NavigateTo(typeof(Search));
             }
         }
 
