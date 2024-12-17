@@ -62,8 +62,8 @@ namespace WpfApp.ViewModel
         // Constructor
         public RegisterViewModel()
         {
-            RegisterCommand = new RelayCommand(RegisterUser, CanRegister);
-            BackToLoginCommand = new RelayCommand(BackToLogin);
+            RegisterCommand = new RelayCommand(param => RegisterUser(), param => CanRegister());
+            BackToLoginCommand = new RelayCommand(param => BackToLogin());
         }
 
         // Methods

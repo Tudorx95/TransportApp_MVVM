@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:components="clr-namespace:WpfApp.Components"
         xmlns:vm="clr-namespace:WpfApp.ViewModel"
         mc:Ignorable="d"
         Title="Search Route" 
@@ -16,12 +17,12 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Images/umbrelas.jpg" />
+            <ImageBrush ImageSource="{Binding Source={x:Static components:Resource.umbrelas_jpg}}" />
         </Grid.Background>
 
         <!-- MapImage -->
         <Image x:Name="MapImage" 
-               Source="Images/Maps/default_map_new.png"
+               Source="{Binding Source={x:Static components:Resource.default_map_new}}"
                Stretch="Uniform" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Center"

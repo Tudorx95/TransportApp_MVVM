@@ -87,8 +87,8 @@ namespace WpfApp.ViewModel
 
         public Ticket_Subscription_InfoViewModel()
         {
-            CalculateTotalCommand = new RelayCommand(CalculateTotal);
-            PurchaseTicketsCommand = new RelayCommand(PurchaseTickets);
+            CalculateTotalCommand = new RelayCommand(param => CalculateTotal());
+            PurchaseTicketsCommand = new RelayCommand(param => PurchaseTickets());
         }
 
         private void CalculateTotal()

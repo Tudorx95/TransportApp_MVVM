@@ -55,8 +55,8 @@ namespace WpfApp
             InitializeStations();
 
             MapMouseDownCommand = new RelayCommand<Point>(OnMapMouseDown);
-            ResetCommand = new RelayCommand(OnReset);
-            GenerateRouteCommand = new RelayCommand(OnGenerateRoute);
+            ResetCommand = new RelayCommand(param => OnReset());
+            GenerateRouteCommand = new RelayCommand(param => OnGenerateRoute());
 
             InstructionText = "Please select the starting location.";
         }
