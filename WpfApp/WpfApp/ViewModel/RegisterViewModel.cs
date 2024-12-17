@@ -10,7 +10,7 @@ using WpfApp.Components;
 
 namespace WpfApp.ViewModel
 {
-    public class RegisterViewModel: INotifyPropertyChanged
+    public class RegisterViewModel : INotifyPropertyChanged
     {
         private string _firstName;
         private string _lastName;

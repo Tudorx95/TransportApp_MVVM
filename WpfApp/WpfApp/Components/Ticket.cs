@@ -11,17 +11,17 @@ namespace WpfApp.Components
 {
     internal class Ticket
     {
-        public int  ticket_count;
+        public int ticket_count;
         public double ticket_price;
         public Ticket_Option ticket_opt;
         public DateTime ticket_date;
         public double total_Price;
         public Ticket()
         {
-            
+
         }
-        public Ticket(int count,double price, Ticket_Option option, DateTime date) 
-        { 
+        public Ticket(int count, double price, Ticket_Option option, DateTime date)
+        {
             ticket_count = count;
             ticket_price = price;
             ticket_opt = option;
@@ -32,7 +32,7 @@ namespace WpfApp.Components
             {
                 ticket_date = DateTime.Now.AddYears(1);
             }
-            if(ticket_opt==Ticket_Option.Half_Year_Subsc)
+            if (ticket_opt == Ticket_Option.Half_Year_Subsc)
             {
                 ticket_date = DateTime.Now.AddMonths(6);
             }
@@ -49,18 +49,18 @@ namespace WpfApp.Components
                     monthsDifference--; // Subtract one month if the current day hasn't reached the start day yet
                 }
 
-                total_Price *=monthsDifference;
-            }    
+                total_Price *= monthsDifference;
+            }
         }
 
         static int Determine_Ticket_ID(Ticket_Option ticket_name)
         {
-            var context = new DataClasses1DataContext();  // Replace with your actual DataContext name
+            var context = new TransportDBEntities();  // Replace with your actual DataContext name
 
             try
             {
                 // Use LINQ to get the ticket matching the criteria
-                var ticket = context.Tip_Bilets
+                var ticket = context.Tip_Bilet
                                     .Where(t =>
                                            (ticket_name.Equals(Ticket_Option.Single_Ticket) && t.nume.ToLower() == "bilet o calatorie".ToLower()) ||
                                            (ticket_name.Equals(Ticket_Option.Round_Trip_Ticket) && t.nume.ToLower() == "bilet dus-intors".ToLower()) ||
@@ -80,14 +80,14 @@ namespace WpfApp.Components
                 MessageBox.Show($"Error: {ex.Message}");
             }
 
-            return -1;  
+            return -1;
         }
         public void AddTicket()
         {
             total_Price = ticket_price * ticket_count;
             determine_Time();
             int id_user = ServiceUser.getUserID();
-            if(id_user==-1)
+            if (id_user == -1)
             {
                 MessageBox.Show($"You are not logged in!");
                 return;
@@ -100,9 +100,9 @@ namespace WpfApp.Components
             }
 
 
-            var context = new DataClasses1DataContext();  // Replace with your actual DataContext name
-    
-         
+            var context = new TransportDBEntities();  // Replace with your actual DataContext name
+
+
             try
             {
                 // Create a new Bilet entity
@@ -115,10 +115,10 @@ namespace WpfApp.Components
                 };
 
                 // Add the new ticket to the context
-                context.Bilets.InsertOnSubmit(newTicket);
+                context.Bilets.Add(newTicket);
 
                 // Submit changes to the database
-                context.SubmitChanges();
+                context.SaveChanges();
 
                 // Show success message
                 MessageBox.Show("Ticket successfully added.");

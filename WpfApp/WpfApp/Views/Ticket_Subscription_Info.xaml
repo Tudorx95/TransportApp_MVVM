@@ -4,33 +4,36 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp"
+             xmlns:ViewModel="clr-namespace:WpfApp.ViewModel"
              mc:Ignorable="d" Height="678" Width="1095">
+
+    <Window.DataContext>
+        <ViewModel:TicketSubscriptionInfoViewModel />
+    </Window.DataContext>
+
     <Grid Background="Wheat" Margin="10">
         <StackPanel>
             <TextBlock Text="Ticket Subscription Information" FontSize="24" FontWeight="Bold" Margin="0,10,0,20" HorizontalAlignment="Center"/>
 
             <TextBlock Text="Select Ticket Type:" FontSize="18" Margin="10,10,0,5"/>
-            <ComboBox x:Name="TicketTypeComboBox" Width="200" Margin="0,0,0,20">
-                <ComboBoxItem Content="Single Ticket - $2"/>
-                <ComboBoxItem Content="Round-trip Ticket - $5"/>
-                <ComboBoxItem Content="Monthly Subscription - $10"/>
-                <ComboBoxItem Content="6 Months Year Subscription - $30"/>
-                <ComboBoxItem Content="1 Year Subscription - $50"/>
-            </ComboBox>
+            <ComboBox x:Name="TicketTypeComboBox" ItemsSource="{Binding TicketOptions}" Width="200" Margin="0,0,0,20"
+                      SelectedItem="{Binding SelectedTicketType, Mode=TwoWay}"
+                      />
+
 
             <TextBlock Text="Select Date:" FontSize="18" Margin="10,10,0,5"/>
-            <Calendar x:Name="TicketDateCalendar" Margin="0,0,0,20"/>
+            <Calendar x:Name="TicketDateCalendar" SelectedDate="{Binding SelectedDate, Mode=TwoWay}" Margin="0,0,0,20"/>
 
             <TextBlock Text="Number of Tickets:" FontSize="18" Margin="10,10,0,5"/>
-            <Slider x:Name="TicketCountSlider" Minimum="1" Maximum="15" IsSnapToTickEnabled="True"  Value="1" Width="200" Margin="0,0,0,20"/>
-            <TextBlock Text="{Binding ElementName=TicketCountSlider, Path=Value}" FontSize="16" HorizontalAlignment="Center"/>
+            <Slider x:Name="TicketCountSlider"  Value="{Binding TicketCount, Mode=TwoWay}"  Minimum="1" Maximum="15" IsSnapToTickEnabled="True" Width="200" Margin="0,0,0,20"/>
+            <TextBlock Text="{Binding TicketCount}" FontSize="16" HorizontalAlignment="Center"/>
 
             <TextBlock Text="Total Price:" FontSize="18" Margin="10,10,0,5"/>
-            <TextBlock x:Name="TotalPriceTextBlock" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center" />
-            <Button Content="Calculate Total" Width="150" Click="CalculateTotal_Click"/>
-            <Button Content="Purchase Tickets" Width="150" Margin="0,10,0,5" HorizontalAlignment="Center" Click="PurchaseTickets_Click"/>
+            <TextBlock x:Name="TotalPriceTextBlock" Text="{Binding TotalPrice}" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center" />
+            <Button Content="Calculate Total" Width="150" Command="{Binding CalculateTotalCommand}"/>
+            <Button Content="Purchase Tickets" Width="150" Margin="0,10,0,5" HorizontalAlignment="Center" Command="{Binding PurchaseTicketsCommand}" />
 
-            <TextBlock x:Name="PurchaseStatusTextBlock" FontSize="16" Margin="0,20,0,0" HorizontalAlignment="Center" Foreground="Green"/>
+            <TextBlock x:Name="PurchaseStatusTextBlock" Text="{Binding PurchaseStatus}" FontSize="16" Margin="0,20,0,0" HorizontalAlignment="Center" Foreground="Green"/>
         </StackPanel>
     </Grid>
 </Window>

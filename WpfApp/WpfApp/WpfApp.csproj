@@ -158,6 +158,27 @@
     <Compile Include="ViewModel\StudentFacilitiesViewModel.cs" />
     <Compile Include="ViewModel\Ticket_Subscription_InfoViewModel.cs" />
     <Compile Include="ViewModel\VideoPlayerControlViewModel.cs" />
+    <Compile Include="Views\Complains_Request.xaml.cs">
+      <DependentUpon>Complains_Request.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NavigationBar.xaml.cs">
+      <DependentUpon>NavigationBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pupils_Free.xaml.cs">
+      <DependentUpon>Pupils_Free.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
     </Compile>
@@ -167,9 +188,14 @@
     <Compile Include="Views\StudentFacilities.xaml.cs">
       <DependentUpon>StudentFacilities.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Ticket_Subscription_Info.xaml.cs">
+      <DependentUpon>Ticket_Subscription_Info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VideoPlayerControl.xaml.cs">
+      <DependentUpon>VideoPlayerControl.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\DB_Connect.cs" />
     <Compile Include="Components\MTC.cs" />
     <Compile Include="Components\Person.cs" />
     <Compile Include="Components\Resource.cs" />

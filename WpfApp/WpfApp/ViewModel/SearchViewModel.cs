@@ -57,7 +57,7 @@ namespace WpfApp.ViewModels
         public SearchViewModel()
         {
             LoadSuggestions();
-            SearchCommand = new RelayCommand<object>(ExecuteSearch);
+            SearchCommand = new RelayCommand(ExecuteSearch);
         }
 
         // Load Suggestions

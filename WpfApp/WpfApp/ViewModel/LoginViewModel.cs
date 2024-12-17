@@ -42,8 +42,8 @@ namespace WpfApp.ViewModel
 
         public LoginViewModel()
         {
-            LoginCommand = new RelayCommand(LoginButton);
-            RegisterCommand = new RelayCommand(RegisterButton);
+            LoginCommand = new RelayCommand(param => LoginButton());
+            RegisterCommand = new RelayCommand(param => RegisterButton());
         }
 
         private void LoginButton()
@@ -54,7 +54,7 @@ namespace WpfApp.ViewModel
             if (ServiceUser.Exist_User(username, password))
             {
                 // set connected state to true
-                LoginModel.Connected= true;
+                LoginModel.Connected = true;
                 // navigate to search window
                 MainWindow mainWindow = new MainWindow();
                 Dictionary<string, string> newLoginDetails = new Dictionary<string, string> { { username, password } };

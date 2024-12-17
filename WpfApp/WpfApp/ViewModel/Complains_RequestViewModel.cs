@@ -13,7 +13,7 @@ using WpfApp.Model;
 
 namespace WpfApp.ViewModel
 {
-    public class Complains_RequestViewModel: INotifyPropertyChanged
+    public class Complains_RequestViewModel : INotifyPropertyChanged
     {
         private string _selectedService;
         private string _complainText;

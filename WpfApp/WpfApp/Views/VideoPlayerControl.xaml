@@ -1,9 +1,14 @@
 ﻿<UserControl x:Class="WpfApp.VideoPlayerControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:WpfApp.ViewModels"
              Height="500" Width="2000"
              HorizontalAlignment="Stretch"
              VerticalAlignment="Stretch">
-    <MediaElement x:Name="videoPlayer" LoadedBehavior="Manual" MediaEnded="VideoPlayer_MediaEnded" />
+    <UserControl.DataContext>
+        <vm:VideoPlayerViewModel />
+    </UserControl.DataContext>
+
+    <MediaElement x:Name="videoPlayer" Source="{Binding VideoSource}" LoadedBehavior="Manual" MediaEnded="VideoPlayer_MediaEnded" />
 
 </UserControl>

@@ -10,7 +10,7 @@
 
     <UserControl.DataContext>
         <!-- Bind the ViewModel here -->
-        <local:SearchRouteViewModel />
+        <ViewModel:SearchRouteViewModel />
     </UserControl.DataContext>
 
     <Grid>

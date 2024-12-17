@@ -1,23 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using WpfApp.Components;
 
 
 namespace WpfApp.ViewModel
 {
-    public class MainWindowViewModel: BaseViewModel
+    public class MainWindowViewModel : INotifyPropertyChanged
     {
-        private object _currentContent;
-        public object CurrentContent
+        private object _currentView;
+
+        public object CurrentView
         {
-            get { return _currentContent; }
+            get => _currentView;
             set
             {
-                _currentContent = value;
-                OnPropertyChanged(nameof(CurrentContent));
+                _currentView = value;
+                OnPropertyChanged();
             }
         }
 
@@ -25,25 +29,24 @@ namespace WpfApp.ViewModel
 
         public MainWindowViewModel()
         {
-            // Initialize the current content as the Home view
-            CurrentContent = new Home();
-
-            // Define the Navigate command to handle navigation
-            NavigateCommand = new RelayCommand<Type>(NavigateToPage);
+            // Default view
+            CurrentView = new Home();
+            NavigationHelper.Navigate = NavigateToPage;
         }
 
         // Handle navigation to different pages
-        private void NavigateToPage(Type pageType)
+        public void NavigateToPage(Type pageType)
         {
-            if (pageType == typeof(Home))
+            if (Activator.CreateInstance(pageType) is object newView)
             {
-                CurrentContent = new Home(); // Change content to Home
+                CurrentView = newView;
             }
-            else if (pageType == typeof(Search))
-            {
-                CurrentContent = new Search(); // Change content to Search
-            }
-            // Add more navigation logic as necessary
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

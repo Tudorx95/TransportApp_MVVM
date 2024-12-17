@@ -6,8 +6,13 @@
         xmlns:local="clr-namespace:WpfApp"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:components="clr-namespace:WpfApp.Components"
+        xmlns:vm="clr-namespace:WpfApp.ViewModel"
         mc:Ignorable="d"
         Height="755" Width="1588">
+
+    <UserControl.DataContext>
+        <vm:HomeViewModel />
+    </UserControl.DataContext>
 
     <UserControl.Resources>
         <!--Animation Storyboard for moving buses with constant speed and looping effect-->
@@ -127,7 +132,8 @@
                 </ListBox.Background>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Button Content="{Binding}" Width="150" Height="20" Margin="5" Click="Button_Click"/>
+                        <Button Content="{Binding}" Width="150" Height="20" Margin="5" 
+                                Command="{Binding DataContext.OpenTicketSubscriptionCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
                 <ListBox.ItemsSource>
