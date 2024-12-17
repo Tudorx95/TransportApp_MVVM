@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         xmlns:components="clr-namespace:WpfApp.Components"
-        xmlns:ViewModel="clr-namespace:WpfApp.ViewModel"
+        xmlns:ViewModel="clr-namespace:WpfApp.ViewModels"
         mc:Ignorable="d"
         Title="StudentFacilities" Height="463" Width="530">
 

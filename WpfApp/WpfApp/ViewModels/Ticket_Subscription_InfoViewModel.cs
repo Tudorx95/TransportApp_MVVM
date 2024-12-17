@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows;
 
 
-namespace WpfApp.ViewModel
+namespace WpfApp.ViewModels
 {
     public class Ticket_Subscription_InfoViewModel : INotifyPropertyChanged
     {

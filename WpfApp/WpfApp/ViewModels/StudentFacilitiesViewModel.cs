@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using WpfApp.Components;
 
-namespace WpfApp.ViewModel
+namespace WpfApp.ViewModels
 {
     public class StudentFacilitiesViewModel : INotifyPropertyChanged
     {

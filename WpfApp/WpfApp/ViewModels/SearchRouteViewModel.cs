@@ -9,10 +9,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Controls;
-using WpfApp.ViewModel;
 using WpfApp.Model;
 
-namespace WpfApp
+namespace WpfApp.ViewModels
 {
     // ViewModel class
     public class SearchRouteViewModel : INotifyPropertyChanged

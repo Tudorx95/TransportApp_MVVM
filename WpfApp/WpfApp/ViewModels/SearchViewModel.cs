@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows.Input;
 using WpfApp.Model;
-using WpfApp.ViewModel;
 
 namespace WpfApp.ViewModels
 {

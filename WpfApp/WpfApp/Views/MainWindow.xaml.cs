@@ -3,7 +3,7 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using WpfApp.Components;
-using WpfApp.ViewModel;
+using WpfApp.ViewModels;
 
 namespace WpfApp
 {

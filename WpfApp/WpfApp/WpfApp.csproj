@@ -144,20 +144,20 @@
     <Compile Include="User.cs">
       <DependentUpon>EF_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\BaseViewModel.cs" />
-    <Compile Include="ViewModel\Complains_RequestViewModel.cs" />
-    <Compile Include="ViewModel\HomeViewModel.cs" />
-    <Compile Include="ViewModel\LoginViewModel.cs" />
-    <Compile Include="ViewModel\MainWindowViewModel.cs" />
-    <Compile Include="ViewModel\NavigationBarViewModel.cs" />
-    <Compile Include="ViewModel\Pupils_FreeViewModel.cs" />
-    <Compile Include="ViewModel\RegisterViewModel.cs" />
-    <Compile Include="ViewModel\RelayCommand.cs" />
-    <Compile Include="ViewModel\SearchRouteViewModel.cs" />
-    <Compile Include="ViewModel\SearchViewModel.cs" />
-    <Compile Include="ViewModel\StudentFacilitiesViewModel.cs" />
-    <Compile Include="ViewModel\Ticket_Subscription_InfoViewModel.cs" />
-    <Compile Include="ViewModel\VideoPlayerControlViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Complains_RequestViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\NavigationBarViewModel.cs" />
+    <Compile Include="ViewModels\Pupils_FreeViewModel.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
+    <Compile Include="ViewModels\RelayCommand.cs" />
+    <Compile Include="ViewModels\SearchRouteViewModel.cs" />
+    <Compile Include="ViewModels\SearchViewModel.cs" />
+    <Compile Include="ViewModels\StudentFacilitiesViewModel.cs" />
+    <Compile Include="ViewModels\Ticket_Subscription_InfoViewModel.cs" />
+    <Compile Include="ViewModels\VideoPlayerControlViewModel.cs" />
     <Compile Include="Views\Complains_Request.xaml.cs">
       <DependentUpon>Complains_Request.xaml</DependentUpon>
     </Compile>

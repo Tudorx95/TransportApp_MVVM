@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:components="clr-namespace:WpfApp.Components"
-        xmlns:vm="clr-namespace:WpfApp.ViewModel"
+        xmlns:vm="clr-namespace:WpfApp.ViewModels"
         mc:Ignorable="d"
         Height="755" Width="1588">
 

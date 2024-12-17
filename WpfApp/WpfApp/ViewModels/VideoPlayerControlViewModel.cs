@@ -8,7 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using WpfApp.Components;
 
-namespace WpfApp.ViewModel
+namespace WpfApp.ViewModels
 {
     public class VideoPlayerControlViewModel : BaseViewModel
     {

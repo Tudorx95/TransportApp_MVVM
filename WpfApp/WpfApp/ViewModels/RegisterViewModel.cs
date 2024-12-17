@@ -8,7 +8,7 @@ using System.Windows;
 using System.Windows.Input;
 using WpfApp.Components;
 
-namespace WpfApp.ViewModel
+namespace WpfApp.ViewModels
 {
     public class RegisterViewModel : INotifyPropertyChanged
     {

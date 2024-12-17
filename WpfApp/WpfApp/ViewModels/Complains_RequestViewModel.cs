@@ -11,7 +11,7 @@ using WpfApp.Components;
 using System.Windows.Controls;
 using WpfApp.Model;
 
-namespace WpfApp.ViewModel
+namespace WpfApp.ViewModels
 {
     public class Complains_RequestViewModel : INotifyPropertyChanged
     {

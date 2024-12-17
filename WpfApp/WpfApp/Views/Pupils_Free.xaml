@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         xmlns:components="clr-namespace:WpfApp.Components"
-        xmlns:ViewModel="clr-namespace:WpfApp.ViewModel"
+        xmlns:viewModel="clr-namespace:WpfApp.ViewModels"
         mc:Ignorable="d"
         Title="Pupils_Free" Height="604" Width="537">
 
     <Window.DataContext>
-        <ViewModel:PupilsFreeViewModel />
+        <viewModel:Pupils_FreeViewModel />
     </Window.DataContext>
 
     <Grid Background="LightBlue" Margin="0,0,0,-6">

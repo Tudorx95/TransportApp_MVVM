@@ -10,7 +10,7 @@ using System.Windows.Input;
 using WpfApp.Components;
 using WpfApp.Model;
 
-namespace WpfApp.ViewModel
+namespace WpfApp.ViewModels
 {
     public class LoginViewModel : INotifyPropertyChanged
     {

@@ -19,3 +19,12 @@ C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp_MarkupCompile.cache
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp_MarkupCompile.lref
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Login.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Complains_Request.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Home.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Login.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\MainWindow.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\NavigationBar.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\StudentFacilities.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.exe
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.pdb
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Pupils_Free.baml

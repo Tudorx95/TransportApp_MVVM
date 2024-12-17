@@ -9,7 +9,7 @@ using System.Windows.Navigation;
 using WpfApp.Components;
 using WpfApp.Model;
 
-namespace WpfApp.ViewModel
+namespace WpfApp.ViewModels
 {
     public class NavigationBarViewModel : BaseViewModel
     {
