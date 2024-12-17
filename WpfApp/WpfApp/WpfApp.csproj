@@ -158,6 +158,15 @@
     <Compile Include="ViewModel\StudentFacilitiesViewModel.cs" />
     <Compile Include="ViewModel\Ticket_Subscription_InfoViewModel.cs" />
     <Compile Include="ViewModel\VideoPlayerControlViewModel.cs" />
+    <Compile Include="Views\Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchRoute.xaml.cs">
+      <DependentUpon>SearchRoute.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentFacilities.xaml.cs">
+      <DependentUpon>StudentFacilities.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\DB_Connect.cs" />
