@@ -97,8 +97,11 @@
     <Compile Include="Model\NavigationBarModel.cs" />
     <Compile Include="Model\Pupils_FreeModel.cs" />
     <Compile Include="Model\RegisterModel.cs" />
+    <Compile Include="Model\RouteDataModel.cs" />
     <Compile Include="Model\SearchModel.cs" />
     <Compile Include="Model\SearchRouteModel.cs" />
+    <Compile Include="Model\StationArrival.cs" />
+    <Compile Include="Model\StationInfoModel.cs" />
     <Compile Include="Model\StudentFacilitiesModel.cs" />
     <Compile Include="Model\Ticket_Subscription_InfoModel.cs" />
     <Compile Include="Model\VideoPlayerControlModel.cs" />
