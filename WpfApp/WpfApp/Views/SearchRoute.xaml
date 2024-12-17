@@ -4,12 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:components="clr-namespace:WpfApp.Components"
-        xmlns:vm="clr-namespace:WpfApp.ViewModels"
+        xmlns:vm="clr-namespace:WpfApp.ViewModel"
         mc:Ignorable="d"
         Title="Search Route" 
         WindowState="Maximized"
-        WindowStartupLocation="CenterScreen" 
-        >
+        WindowStartupLocation="CenterScreen" >
 
     <Window.DataContext>
         <vm:SearchRouteViewModel />
@@ -17,7 +16,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="{Binding Source={x:Static components:Resource.umbrelas_jpg}}" />
+            <ImageBrush ImageSource="{Binding Source={x:Static components:Resource.umbrelas}}" />
         </Grid.Background>
 
         <!-- MapImage -->

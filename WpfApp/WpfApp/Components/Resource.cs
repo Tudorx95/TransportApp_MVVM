@@ -39,6 +39,7 @@ namespace WpfApp.Components
         public static string tramvai10 = PWD(Resource4.tramvai10_png);
         public static string tramvai11 = PWD(Resource4.tramvai11_png);
         public static string tramvai12 = PWD(Resource4.tramvai12_png);
+        public static string umbrelas = PWD(Resource3.umbrelas_jpg);
 
         public static string PWD(string path)
         {

@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:WpfApp"
              xmlns:viewModel="clr-namespace:WpfApp.ViewModels"
              mc:Ignorable="d"
+             xmlns:components="clr-namespace:WpfApp.Components"
              d:DesignHeight="450" d:DesignWidth="800">
 
     <UserControl.DataContext>
@@ -98,8 +99,8 @@
                     <Border BorderBrush="#007ACC" BorderThickness="5" CornerRadius="10"
                             Background="#F0F0F0" Margin="20" Height="400" Padding="10">
                         <MediaElement Source="{Binding VideoPath}" 
-                                      LoadedBehavior="Manual" UnloadedBehavior="Stop" 
-                                      />
+                                      LoadedBehavior="Manual" UnloadedBehavior="Stop"
+                                      MediaEnded="{Binding Media_MediaEnded}"/>
                     </Border>
                 </StackPanel>
             </Border>

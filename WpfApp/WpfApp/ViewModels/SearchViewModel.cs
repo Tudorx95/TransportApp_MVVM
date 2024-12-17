@@ -2,6 +2,8 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Windows.Controls;
+using System.Windows;
 using System.Windows.Input;
 using WpfApp.Model;
 
@@ -130,6 +132,17 @@ namespace WpfApp.ViewModels
         private void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public void Media_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            // Reset video to start from the beginning
+            MediaElement media = sender as MediaElement;
+            if (media != null)
+            {
+                media.Position = TimeSpan.Zero;
+                media.Play();
+            }
         }
     }
 }

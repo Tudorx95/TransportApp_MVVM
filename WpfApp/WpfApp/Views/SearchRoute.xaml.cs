@@ -76,7 +76,6 @@ namespace WpfApp
             ResetSelection();
         }
 
-
         private void ShowDistance(Point clickedPoint)
         {
             var distances = stations
