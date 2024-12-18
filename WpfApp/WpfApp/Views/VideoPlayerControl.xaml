@@ -6,7 +6,7 @@
              HorizontalAlignment="Stretch"
              VerticalAlignment="Stretch">
     <UserControl.DataContext>
-        <vm:VideoPlayerViewModel />
+        <vm:VideoPlayerControlViewModel />
     </UserControl.DataContext>
 
     <MediaElement x:Name="videoPlayer" Source="{Binding VideoSource}" LoadedBehavior="Manual" MediaEnded="VideoPlayer_MediaEnded" />

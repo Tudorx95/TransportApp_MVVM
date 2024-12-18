@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:components="clr-namespace:WpfApp.Components"
-        xmlns:vm="clr-namespace:WpfApp.ViewModel"
+        xmlns:vm="clr-namespace:WpfApp.ViewModels"
         mc:Ignorable="d"
         Title="Search Route" 
         WindowState="Maximized"

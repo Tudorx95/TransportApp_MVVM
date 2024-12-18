@@ -58,3 +58,21 @@ C:\Users\razva\Desktop\MVVMApp\TransportApp_MVVM\WpfApp\WpfApp\obj\Debug\Views\R
 C:\Users\razva\Desktop\MVVMApp\TransportApp_MVVM\WpfApp\WpfApp\obj\Debug\Views\StudentFacilities.baml
 C:\Users\razva\Desktop\MVVMApp\TransportApp_MVVM\WpfApp\WpfApp\obj\Debug\Views\SearchRoute.baml
 C:\Users\razva\Desktop\MVVMApp\TransportApp_MVVM\WpfApp\WpfApp\obj\Debug\Views\Search.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Search.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Ticket_Subscription_Info.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\WpfApp.exe.config
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\WpfApp.exe
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\WpfApp.pdb
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\EntityFramework.dll
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\EntityFramework.xml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.g.resources
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource1.resources
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource2.resources
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource3.resources
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource4.resources
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.Properties.Resources.resources
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.csproj.GenerateResource.cache
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.csproj.CoreCompileInputs.cache
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.csproj.Up2Date
