@@ -28,7 +28,7 @@ namespace WpfApp.ViewModels
                     switch (target)
                     {
                         case "Home":
-                            NavigationHelper.NavigateTo(typeof(Home));
+                            NavigateHome(typeof(Home));
                             break;
                         case "Login":
                             HandleLoginNavigation();
@@ -62,8 +62,14 @@ namespace WpfApp.ViewModels
             }
         }
 
-        private void NavigateHome()
+        private void NavigateHome(Type pageType)
         {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            if (mainWindow?.MainContent.Content?.GetType() == pageType)
+            {
+                // If the requested page is already displayed, do nothing
+                return;
+            }
             NavigationHelper.NavigateTo(typeof(Home));
         }
         private void NavigateLogin()
