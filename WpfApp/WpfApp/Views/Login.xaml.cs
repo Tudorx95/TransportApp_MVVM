@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows;
 using System.Windows.Controls;
 using WpfApp.Components;
+using WpfApp.ViewModels;
 
 namespace WpfApp
 {
@@ -14,7 +15,8 @@ namespace WpfApp
             InitializeComponent();
             // Initialize placeholders visibility
             UsernamePlaceholder.Visibility = string.IsNullOrWhiteSpace(UsernameTextBox.Text) ? Visibility.Visible : Visibility.Collapsed;
-            PasswordPlaceholder.Visibility = string.IsNullOrWhiteSpace(PasswordBox.Password) ? Visibility.Visible : Visibility.Collapsed;
+            //PasswordPlaceholder.Visibility = string.IsNullOrWhiteSpace(PasswordBox.Password) ? Visibility.Visible : Visibility.Collapsed;
+            DataContext = new LoginViewModel();
         }
 
         private void UsernameTextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -27,15 +29,15 @@ namespace WpfApp
             UsernamePlaceholder.Visibility = string.IsNullOrWhiteSpace(UsernameTextBox.Text) ? Visibility.Visible : Visibility.Collapsed;
         }
 
-        private void PasswordBox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            PasswordPlaceholder.Visibility = Visibility.Collapsed;
-        }
+        //private void PasswordBox_GotFocus(object sender, RoutedEventArgs e)
+        //{
+        //    PasswordPlaceholder.Visibility = Visibility.Collapsed;
+        //}
 
-        private void PasswordBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            PasswordPlaceholder.Visibility = string.IsNullOrWhiteSpace(PasswordBox.Password) ? Visibility.Visible : Visibility.Collapsed;
-        }
+        //private void PasswordBox_LostFocus(object sender, RoutedEventArgs e)
+        //{
+        //    PasswordPlaceholder.Visibility = string.IsNullOrWhiteSpace(PasswordBox.Password) ? Visibility.Visible : Visibility.Collapsed;
+        //}
 
         
     }

@@ -59,9 +59,9 @@ namespace WpfApp.Components
             var user = context.Users.FirstOrDefault(p => p.username==username && p.password==password);
             if(user!=null)
                 return true;
-            if(user_passwd!=null && user_username == null)
+            if(user_username == null)
                 MessageBox.Show("Incorrect Username!");
-            else if(user_username!=null && user_passwd==null)
+            else if(user_passwd==null)
                 MessageBox.Show("Incorrect Password!");
             return false;
         }

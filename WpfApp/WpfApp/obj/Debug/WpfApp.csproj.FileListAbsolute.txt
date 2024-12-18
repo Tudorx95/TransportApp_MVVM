@@ -1,33 +1,3 @@
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.csproj.AssemblyReference.cache
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Register.baml
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\SearchRoute.baml
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\VideoPlayerControl.baml
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Complains_Request.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Home.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\MainWindow.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\NavigationBar.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Pupils_Free.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Register.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Search.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\SearchRoute.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\StudentFacilities.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Ticket_Subscription_Info.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\VideoPlayerControl.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\App.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp_Content.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp_MarkupCompile.cache
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp_MarkupCompile.lref
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Login.g.cs
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Complains_Request.baml
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Home.baml
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Login.baml
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\MainWindow.baml
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\NavigationBar.baml
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\StudentFacilities.baml
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.exe
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.pdb
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Pupils_Free.baml
 C:\Users\razva\Desktop\MVVMApp\TransportApp_MVVM\WpfApp\WpfApp\obj\Debug\WpfApp.csproj.AssemblyReference.cache
 C:\Users\razva\Desktop\MVVMApp\TransportApp_MVVM\WpfApp\WpfApp\obj\Debug\Views\Complains_Request.g.cs
 C:\Users\razva\Desktop\MVVMApp\TransportApp_MVVM\WpfApp\WpfApp\obj\Debug\Views\Home.g.cs
@@ -58,8 +28,6 @@ C:\Users\razva\Desktop\MVVMApp\TransportApp_MVVM\WpfApp\WpfApp\obj\Debug\Views\R
 C:\Users\razva\Desktop\MVVMApp\TransportApp_MVVM\WpfApp\WpfApp\obj\Debug\Views\StudentFacilities.baml
 C:\Users\razva\Desktop\MVVMApp\TransportApp_MVVM\WpfApp\WpfApp\obj\Debug\Views\SearchRoute.baml
 C:\Users\razva\Desktop\MVVMApp\TransportApp_MVVM\WpfApp\WpfApp\obj\Debug\Views\Search.baml
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Search.baml
-C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Ticket_Subscription_Info.baml
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\WpfApp.exe.config
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\WpfApp.exe
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\WpfApp.pdb
@@ -67,6 +35,36 @@ C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\EntityFramework.xml
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.csproj.AssemblyReference.cache
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Complains_Request.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Home.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Login.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\MainWindow.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\NavigationBar.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Pupils_Free.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Register.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Search.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\SearchRoute.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\StudentFacilities.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Ticket_Subscription_Info.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\VideoPlayerControl.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\App.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp_Content.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp_MarkupCompile.cache
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp_MarkupCompile.lref
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Complains_Request.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Home.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Login.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\MainWindow.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\NavigationBar.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Pupils_Free.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Register.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Search.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\SearchRoute.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\StudentFacilities.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Ticket_Subscription_Info.baml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\VideoPlayerControl.baml
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.g.resources
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource1.resources
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.Components.Resource2.resources
@@ -76,3 +74,5 @@ C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.csproj.GenerateResource.cache
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.csproj.CoreCompileInputs.cache
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.csproj.Up2Date
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.exe
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.pdb

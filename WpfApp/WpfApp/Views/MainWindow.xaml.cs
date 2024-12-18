@@ -14,14 +14,25 @@ namespace WpfApp
         {
             InitializeComponent();
             DataContext = new MainWindowViewModel();
+            NavigationHelper.Navigate = NavigateToPage;
             this.WindowState = WindowState.Maximized; // Maximize the window
             //MainContent.Content = new Home();
         }
-
         private void MainContent_Loaded(object sender, RoutedEventArgs e)
         {
             MainWindowViewModel viewModel = new MainWindowViewModel();
             MainContent.DataContext = viewModel;
+        }
+        private void NavigateToPage(Type pageType)
+        {
+            if (Activator.CreateInstance(pageType) is UserControl pageInstance)
+            {
+                MainContent.Content = pageInstance;
+            }
+            else
+            {
+                throw new InvalidOperationException("Navigation target must be a UserControl.");
+            }
         }
 
         //public void NavigateToPage(Type pageType)

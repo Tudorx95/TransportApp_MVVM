@@ -25,7 +25,10 @@
 
                 <!-- Password PasswordBox with Placeholder -->
                 <Grid Margin="0,0,0,20" Height="25" Width="204">
-                    <PasswordBox Name="PasswordBox" Password="{Binding Password, UpdateSourceTrigger=PropertyChanged}" GotFocus="PasswordBox_GotFocus" LostFocus="PasswordBox_LostFocus" Margin="10,1,10,0"/>
+                    <PasswordBox Name="PasswordBox" 
+                                 Components:PasswordBoxHelper.AttachPassword="True"
+                                 Components:PasswordBoxHelper.BoundPassword="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                  Margin="10,1,10,0"/>
                     <TextBlock Name="PasswordPlaceholder" Text="Password" Foreground="Gray" VerticalAlignment="Center" IsHitTestVisible="False" Height="16" HorizontalAlignment="Center"/>
                 </Grid>
 

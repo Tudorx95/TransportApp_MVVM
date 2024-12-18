@@ -47,6 +47,7 @@ namespace WpfApp.ViewModels
 
         private void PlayVideo(object obj)
         {
+            _mediaElement.Source = VideoSource;
             _mediaElement?.Play();
         }
 

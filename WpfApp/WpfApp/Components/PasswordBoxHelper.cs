@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows;
 
-namespace WpfApp.ViewModel
+namespace WpfApp.Components
 {
     public static class PasswordBoxHelper
     {
         public static readonly DependencyProperty BoundPasswordProperty =
-            DependencyProperty.RegisterAttached(
-                "BoundPassword",
-                typeof(string),
-                typeof(PasswordBoxHelper),
+            DependencyProperty.RegisterAttached("BoundPassword", typeof(string), typeof(PasswordBoxHelper),
                 new PropertyMetadata(string.Empty, OnBoundPasswordChanged));
+
+        public static readonly DependencyProperty AttachPasswordProperty =
+            DependencyProperty.RegisterAttached("AttachPassword", typeof(bool), typeof(PasswordBoxHelper),
+                new PropertyMetadata(false, OnAttachPasswordChanged));
 
         public static string GetBoundPassword(DependencyObject obj)
         {
@@ -27,13 +28,36 @@ namespace WpfApp.ViewModel
             obj.SetValue(BoundPasswordProperty, value);
         }
 
+        public static bool GetAttachPassword(DependencyObject obj)
+        {
+            return (bool)obj.GetValue(AttachPasswordProperty);
+        }
+
+        public static void SetAttachPassword(DependencyObject obj, bool value)
+        {
+            obj.SetValue(AttachPasswordProperty, value);
+        }
+
         private static void OnBoundPasswordChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is PasswordBox passwordBox && !passwordBox.Password.Equals((string)e.NewValue))
+            {
+                passwordBox.Password = (string)e.NewValue;
+            }
+        }
+
+        private static void OnAttachPasswordChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             if (d is PasswordBox passwordBox)
             {
-                passwordBox.PasswordChanged -= PasswordBox_PasswordChanged;
-                passwordBox.Password = (string)e.NewValue;
-                passwordBox.PasswordChanged += PasswordBox_PasswordChanged;
+                if ((bool)e.NewValue)
+                {
+                    passwordBox.PasswordChanged += PasswordBox_PasswordChanged;
+                }
+                else
+                {
+                    passwordBox.PasswordChanged -= PasswordBox_PasswordChanged;
+                }
             }
         }
 
@@ -41,7 +65,12 @@ namespace WpfApp.ViewModel
         {
             if (sender is PasswordBox passwordBox)
             {
-                SetBoundPassword(passwordBox, passwordBox.Password);
+                var newPassword = passwordBox.Password;
+                SetBoundPassword(passwordBox, newPassword);
+
+                // Explicitly trigger the update of the source binding
+                var bindingExpression = passwordBox.GetBindingExpression(BoundPasswordProperty);
+                bindingExpression?.UpdateSource();
             }
         }
     }

@@ -27,8 +27,8 @@ namespace WpfApp
         public Home()
         {
             InitializeComponent();
+            
             //this.Loaded += Home_Loaded;
-            DataContext = new HomeViewModel();
         }
         //private void Home_Loaded(object sender, RoutedEventArgs e)
         //{
