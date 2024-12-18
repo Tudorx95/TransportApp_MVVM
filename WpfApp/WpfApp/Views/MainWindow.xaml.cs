@@ -12,12 +12,16 @@ namespace WpfApp
 
         public MainWindow()
         {
-            //DB_Connect.connection(".", Resource1.DB_Name);
-            //MessageBox.Show(DB_Connect.connect.ServerVersion.ToString());
             InitializeComponent();
             DataContext = new MainWindowViewModel();
-            //this.WindowState = WindowState.Maximized; // Maximize the window
+            this.WindowState = WindowState.Maximized; // Maximize the window
             //MainContent.Content = new Home();
+        }
+
+        private void MainContent_Loaded(object sender, RoutedEventArgs e)
+        {
+            MainWindowViewModel viewModel = new MainWindowViewModel();
+            MainContent.DataContext = viewModel;
         }
 
         //public void NavigateToPage(Type pageType)

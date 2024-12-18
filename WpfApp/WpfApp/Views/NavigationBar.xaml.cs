@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using WpfApp.Components;
+using WpfApp.ViewModels;
 
 namespace WpfApp
 {
@@ -10,6 +11,7 @@ namespace WpfApp
         public NavigationBar()
         {
             InitializeComponent();
+            DataContext = new NavigationBarViewModel();
         }
 
     }

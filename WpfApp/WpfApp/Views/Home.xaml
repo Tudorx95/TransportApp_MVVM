@@ -133,7 +133,8 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Button Content="{Binding}" Width="150" Height="20" Margin="5" 
-                                Command="{Binding DataContext.OpenTicketSubscriptionCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+                                Command="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                CommandParameter="{Binding}"/>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
                 <ListBox.ItemsSource>

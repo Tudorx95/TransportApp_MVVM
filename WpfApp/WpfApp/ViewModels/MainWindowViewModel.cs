@@ -31,7 +31,7 @@ namespace WpfApp.ViewModels
         {
             // Default view
             CurrentView = new Home();
-            NavigationHelper.Navigate = NavigateToPage;
+           NavigationHelper.Navigate = NavigateToPage;
         }
 
         // Handle navigation to different pages

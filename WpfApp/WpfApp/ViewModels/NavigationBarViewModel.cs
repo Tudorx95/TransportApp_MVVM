@@ -23,20 +23,45 @@ namespace WpfApp.ViewModels
             // Initialize commands
             NavigateCommand = new RelayCommand(param =>
             {
-                switch (param)
+                if (param is string target)
                 {
-                    case "Home":
-                        NavigationHelper.Navigate(typeof(Home));
-                        break;
-                    case "Login":
-                        NavigationHelper.Navigate(typeof(Login));
-                        break;
-                    case "Search":
-                        NavigationHelper.Navigate(typeof(Search));
-                        break;
+                    switch (target)
+                    {
+                        case "Home":
+                            NavigationHelper.NavigateTo(typeof(Home));
+                            break;
+                        case "Login":
+                            HandleLoginNavigation();
+                            break;
+                        case "Search":
+                            HandleSearchNavigation();
+                            break;
+                    }
                 }
             });
         }
+        private void HandleLoginNavigation()
+        {
+            if (LoginModel.Connected)
+            {
+                LoginModel.Connected = false;
+                ServiceUser.LoginDetails.Clear();
+                System.Windows.MessageBox.Show("Log out successfully!");
+            }
+            NavigationHelper.NavigateTo(typeof(Login));
+        }
+        private void HandleSearchNavigation()
+        {
+            if (LoginModel.Connected)
+            {
+                NavigationHelper.NavigateTo(typeof(Search));
+            }
+            else
+            {
+                NavigationHelper.NavigateTo(typeof(Login));
+            }
+        }
+
         private void NavigateHome()
         {
             NavigationHelper.NavigateTo(typeof(Home));

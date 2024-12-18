@@ -11,10 +11,10 @@
 
     <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" LastChildFill="True" >
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <!--<Image Source="{Binding Logo}" Width="123" Height="24" Margin="5"/>-->
-            <Button x:Name="HomeButton" Content="Home" Width="100" Command="{Binding NavigateCommand}" Margin="5"/>
-            <Button x:Name="LoginButton"  Content="Log in/out" Width="100" Command="{Binding NavigateCommand}" Margin="5"/>
-            <Button x:Name="SearchButton" Content="Search for Transport" Width="150" Command="{Binding NavigateCommand}" Margin="5"/>
+            <Image Source="{Binding Logo}" Width="123" Height="24" Margin="5"/>
+            <Button x:Name="HomeButton" Content="Home" Width="100" Command="{Binding NavigateCommand}" CommandParameter="Home" Margin="5"/>
+            <Button x:Name="LoginButton"  Content="Log in/out" Width="100" Command="{Binding NavigateCommand}" CommandParameter="Login" Margin="5"/>
+            <Button x:Name="SearchButton" Content="Search for Transport" Width="150" Command="{Binding NavigateCommand}" CommandParameter="Search" Margin="5"/>
         </StackPanel>
     </DockPanel>
 </UserControl>

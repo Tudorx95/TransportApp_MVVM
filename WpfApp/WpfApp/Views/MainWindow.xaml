@@ -15,10 +15,8 @@
         <local:NavigationBar  x:Name="NavBar" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
 
         <!-- Main Content Area -->
-        <ContentControl x:Name="MainContent" Margin="0,50,0,0" Grid.ColumnSpan="2">
-            <Grid>
-                
-            </Grid>
+        <ContentControl x:Name="MainContent" Margin="0,50,0,0" Grid.ColumnSpan="2" Content="{Binding CurrentView}">
+           
         </ContentControl>
 
     </Grid>
