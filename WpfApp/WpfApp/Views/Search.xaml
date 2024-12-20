@@ -20,10 +20,11 @@
         </Grid.Background>
 
         <Canvas>
+            <!--Visibility="{Binding IsLeftImageVisible, Converter={StaticResource BoolToVisibilityConverter}}"-->                   
             <Image x:Name="LeftImage" 
                    Width="401" Height="562" 
-                   Visibility="{Binding IsLeftImageVisible, Converter={StaticResource BoolToVisibilityConverter}}"
                    Canvas.Left="12" Canvas.Top="100"
+                   Visibility="{Binding IsLeftImageVisible}"
                    Source="{Binding LeftImagePath}"
                    Stretch="Fill"/>
         </Canvas>
@@ -51,7 +52,9 @@
                     <!-- Floating Label -->
                     <TextBlock Text="Enter location or transport type..." 
                                FontSize="14" Foreground="#888" VerticalAlignment="Top"
-                               Margin="15,0,0,0" Visibility="{Binding IsFloatingLabelVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                               Margin="15,0,0,0" 
+                               Visibility="{Binding IsFloatingLabelVisible}"/>
+                    <!--Visibility="{Binding IsFloatingLabelVisible, Converter={StaticResource BoolToVisibilityConverter}}"-->
 
                     <!-- Search TextBox -->
                     <TextBox Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}"
@@ -71,7 +74,9 @@
             <!-- Suggestions List -->
             <ListBox ItemsSource="{Binding FilteredSuggestions}"
                      SelectedItem="{Binding SelectedSuggestion, Mode=TwoWay}"
-                     Width="450" Margin="0,5,0,0" Visibility="{Binding AreSuggestionsVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                     Width="450" Margin="0,5,0,0" 
+                     Visibility="Collapsed"/>
+            <!--Visibility="{Binding AreSuggestionsVisible, Converter={StaticResource BoolToVisibilityConverter}}"-->
 
             <!-- Find Path Button -->
             <Button Content="Find path to destination" 
@@ -84,8 +89,9 @@
         <!-- Route Display -->
         <Grid HorizontalAlignment="Right" VerticalAlignment="Stretch" Grid.Column="2">
             <Border Width="500" BorderBrush="#ccc" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <StackPanel x:Name="RouteDisplay" Visibility="{Binding IsRouteVisible, Converter={StaticResource BoolToVisibilityConverter}}" Orientation="Vertical" Margin="10">
-                    <!-- Station DataGrid -->
+                <!--<StackPanel x:Name="RouteDisplay" Visibility="{Binding IsRouteVisible, Converter={StaticResource BoolToVisibilityConverter}}" Orientation="Vertical" Margin="10">-->
+                <StackPanel x:Name="RouteDisplay" Visibility="{Binding IsRouteVisible}" Orientation="Vertical" Margin="10">
+                <!-- Station DataGrid -->
                     <DataGrid ItemsSource="{Binding StationArrivals}"
                               AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto"
                               HorizontalScrollBarVisibility="Auto" MinHeight="300" Width="340">

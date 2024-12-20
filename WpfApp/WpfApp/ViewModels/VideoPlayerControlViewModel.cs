@@ -12,7 +12,6 @@ namespace WpfApp.ViewModels
 {
     public class VideoPlayerControlViewModel : BaseViewModel
     {
-        private MediaElement _mediaElement;
         private Uri _videoSource;
 
         public Uri VideoSource
@@ -25,40 +24,13 @@ namespace WpfApp.ViewModels
             }
         }
 
-        public ICommand PlayCommand { get; }
-        public ICommand PauseCommand { get; }
-        public ICommand StopCommand { get; }
 
         public VideoPlayerControlViewModel()
         {
             // Load video path from resources
             string fullPath = Resource.PWD(Resource3.PublicTransport_mp4);
             VideoSource = new Uri(fullPath, UriKind.RelativeOrAbsolute);
-
-            // Initialize commands
-            PlayCommand = new RelayCommand(PlayVideo);
-            PauseCommand = new RelayCommand(PauseVideo);
-            StopCommand = new RelayCommand(StopVideo);
         }
-        public void RegisterMediaElement(MediaElement mediaElement)
-        {
-            _mediaElement = mediaElement;
-        }
-
-        private void PlayVideo(object obj)
-        {
-            _mediaElement.Source = VideoSource;
-            _mediaElement?.Play();
-        }
-
-        private void PauseVideo(object obj)
-        {
-            _mediaElement?.Pause();
-        }
-
-        private void StopVideo(object obj)
-        {
-            _mediaElement?.Stop();
-        }
+      
     }
 }

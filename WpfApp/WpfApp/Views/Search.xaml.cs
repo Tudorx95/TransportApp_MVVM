@@ -34,5 +34,6 @@ namespace WpfApp
             SearchRoute newWindow = new SearchRoute();
             newWindow.Show();
         }
+        
     }
 }

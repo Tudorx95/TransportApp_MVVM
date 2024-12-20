@@ -23,21 +23,14 @@ namespace WpfApp
     /// </summary>
     public partial class VideoPlayerControl : UserControl
     {
-        //private VideoPlayerControlViewModel viewModel;
         public VideoPlayerControl()
         {
             InitializeComponent();
-            string fullPath = Resource.PWD(Resource3.PublicTransport_mp4);
-            videoPlayer.Source = new Uri(fullPath, UriKind.RelativeOrAbsolute);
             videoPlayer.Play();
-            //viewModel = (VideoPlayerControlViewModel)DataContext;
-            //viewModel.RegisterMediaElement(videoPlayer);
         }
         private void VideoPlayer_MediaEnded(object sender, RoutedEventArgs e)
         {
             // Restart the video from the beginning
-            string fullVideoPath = Resource.PWD(Resource3.PublicTransport_mp4);
-            videoPlayer.Source = new Uri(fullVideoPath, UriKind.RelativeOrAbsolute);
             videoPlayer.Position = TimeSpan.Zero;
             videoPlayer.Play();
         }

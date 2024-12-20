@@ -72,8 +72,14 @@ namespace WpfApp.ViewModels
             }
             NavigationHelper.NavigateTo(typeof(Home));
         }
-        private void NavigateLogin()
+        private void NavigateLogin(Type pageType)
         {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            if (mainWindow?.MainContent.Content?.GetType() == pageType)
+            {
+                // If the requested page is already displayed, do nothing
+                return;
+            }
             if (LoginModel.Connected)
             {
                 LoginModel.Connected = false;
@@ -82,8 +88,14 @@ namespace WpfApp.ViewModels
             }
             NavigationHelper.NavigateTo(typeof(Login));
         }
-        private void NavigateSearch()
+        private void NavigateSearch(Type pageType)
         {
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            if (mainWindow?.MainContent.Content?.GetType() == pageType)
+            {
+                // If the requested page is already displayed, do nothing
+                return;
+            }
             if (LoginModel.Connected)
             {
                 NavigationHelper.NavigateTo(typeof(Search));

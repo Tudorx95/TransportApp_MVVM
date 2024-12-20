@@ -2,10 +2,12 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 using System.Windows;
 using System.Windows.Input;
 using WpfApp.Model;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WpfApp.ViewModels
 {
@@ -16,6 +18,9 @@ namespace WpfApp.ViewModels
         // Properties
         public ObservableCollection<string> Suggestions { get; set; } = new ObservableCollection<string>();
         public ObservableCollection<StationArrival> Stations { get; set; } = new ObservableCollection<StationArrival>();
+
+        static public Visibility BoolToVisibilityConverter;
+        
 
         private string _selectedSuggestion;
         public string SelectedSuggestion
@@ -144,5 +149,30 @@ namespace WpfApp.ViewModels
                 media.Play();
             }
         }
+
+        protected bool SetProperty<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
+        {
+            if (!Equals(field, newValue))
+            {
+                field = newValue;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                return true;
+            }
+
+            return false;
+        }
+
+        private Visibility isFloatingLabelVisible;
+
+        public Visibility IsFloatingLabelVisible { get => isFloatingLabelVisible; set => SetProperty(ref isFloatingLabelVisible, value); }
+
+        private Visibility isLeftImageVisible;
+
+        public Visibility IsLeftImageVisible { get => isLeftImageVisible; set => SetProperty(ref isLeftImageVisible, value); }
+
+        private Visibility isRouteVisible;
+
+        public Visibility IsRouteVisible { get => isRouteVisible; set => SetProperty(ref isRouteVisible, value); }
+
     }
 }
