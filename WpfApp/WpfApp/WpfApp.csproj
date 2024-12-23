@@ -44,6 +44,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.135\lib\net462\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -82,13 +85,24 @@
     </Compile>
     <Compile Include="Components\NavigationHelper.cs" />
     <Compile Include="Components\PasswordBoxHelper.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Coordonate_Statie.cs">
       <DependentUpon>EF_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF_Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EF_Model.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="EF_Model.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EF_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EF_Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Complains_RequestModel.cs" />
     <Compile Include="Model\HomeModel.cs" />
@@ -205,16 +219,6 @@
     <Compile Include="Components\Resource4.Designer.cs" />
     <Compile Include="Components\ServiceUser.cs" />
     <Compile Include="Components\Ticket.cs" />
-    <Compile Include="EF_Model.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EF_Model.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EF_Model.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EF_Model.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -254,16 +258,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="EF_Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EF_Model.edmx</DependentUpon>
-      <LastGenOutput>EF_Model.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="EF_Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EF_Model.edmx</DependentUpon>
-      <LastGenOutput>EF_Model.cs</LastGenOutput>
-    </Content>
     <Resource Include="Images\Maps\autobuz101.png" />
     <Resource Include="Images\Maps\autobuz102.png" />
     <Resource Include="Images\Maps\autobuz103.png" />
@@ -290,6 +284,16 @@
     <Resource Include="Images\bk_bun.jpg" />
     <Resource Include="Images\bk_final.jpg" />
     <Resource Include="Images\bus_gif.gif" />
+    <Content Include="EF_Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EF_Model.edmx</DependentUpon>
+      <LastGenOutput>EF_Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EF_Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EF_Model.edmx</DependentUpon>
+      <LastGenOutput>EF_Model.cs</LastGenOutput>
+    </Content>
     <Content Include="Images\bus_video.mp4" />
     <Resource Include="Images\ceva_picture.jpg" />
     <Resource Include="Images\default_map1.png" />

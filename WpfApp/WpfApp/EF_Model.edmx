@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_unic" Type="int" Nullable="false" />
           <Property Name="salariu" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="id_persoana" Type="int" Nullable="false" />
           <Property Name="tip_angajat" Type="int" Nullable="false" />
@@ -47,7 +47,7 @@
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_unic" Type="int" Nullable="false" />
           <Property Name="id_tip" Type="int" Nullable="false" />
           <Property Name="nr_traseu" Type="int" Nullable="false" />
           <Property Name="nr_inmatriculare" Type="nvarchar" MaxLength="20" Nullable="false" />
@@ -64,7 +64,7 @@
           <Property Name="prenume" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="CNP" Type="char" MaxLength="13" />
           <Property Name="adresa" Type="nvarchar" MaxLength="200" />
-          <Property Name="email" Type="nvarchar" MaxLength="100" />
+          <Property Name="email" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Statie">
           <Key>
@@ -89,14 +89,14 @@
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_unic" Type="int" Nullable="false" />
           <Property Name="nume" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="Tip_Bilet">
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_unic" Type="int" Nullable="false" />
           <Property Name="nume" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="Tip_Statie">
@@ -110,21 +110,21 @@
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_unic" Type="int" Nullable="false" />
           <Property Name="nume" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="TipMT">
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_unic" Type="int" Nullable="false" />
           <Property Name="nume" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="Traseu">
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_unic" Type="int" Nullable="false" />
           <Property Name="nume" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="User">
@@ -136,7 +136,7 @@
           <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="id_persoana" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Coordonat__id_st__41EDCAC5">
+        <Association Name="FK__Coordonat__id_st__0880433F">
           <End Role="Tip_Statie" Type="Self.Tip_Statie" Multiplicity="0..1" />
           <End Role="Coordonate_Statie" Type="Self.Coordonate_Statie" Multiplicity="*" />
           <ReferentialConstraint>
@@ -232,7 +232,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TipUser_Persoana">
+        <Association Name="FK_TipUser1_Persoana">
           <End Role="Tip_User" Type="Self.Tip_User" Multiplicity="1" />
           <End Role="Persoana" Type="Self.Persoana" Multiplicity="*" />
           <ReferentialConstraint>
@@ -351,7 +351,7 @@
           <EntitySet Name="TipMT" EntityType="Self.TipMT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Traseu" EntityType="Self.Traseu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Coordonat__id_st__41EDCAC5" Association="Self.FK__Coordonat__id_st__41EDCAC5">
+          <AssociationSet Name="FK__Coordonat__id_st__0880433F" Association="Self.FK__Coordonat__id_st__0880433F">
             <End Role="Tip_Statie" EntitySet="Tip_Statie" />
             <End Role="Coordonate_Statie" EntitySet="Coordonate_Statie" />
           </AssociationSet>
@@ -383,7 +383,7 @@
             <End Role="TipMT" EntitySet="TipMT" />
             <End Role="MT" EntitySet="MT" />
           </AssociationSet>
-          <AssociationSet Name="FK_TipUser_Persoana" Association="Self.FK_TipUser_Persoana">
+          <AssociationSet Name="FK_TipUser1_Persoana" Association="Self.FK_TipUser1_Persoana">
             <End Role="Tip_User" EntitySet="Tip_User" />
             <End Role="Persoana" EntitySet="Persoana" />
           </AssociationSet>
@@ -417,7 +417,7 @@
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_unic" Type="Int32" Nullable="false" />
           <Property Name="salariu" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="id_persoana" Type="Int32" Nullable="false" />
           <Property Name="tip_angajat" Type="Int32" Nullable="false" />
@@ -457,13 +457,13 @@
           <Property Name="id_statie" Type="Int32" />
           <Property Name="coord_X" Type="Int32" Nullable="false" />
           <Property Name="coord_Y" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Tip_Statie" Relationship="Self.FK__Coordonat__id_st__41EDCAC5" FromRole="Coordonate_Statie" ToRole="Tip_Statie" />
+          <NavigationProperty Name="Tip_Statie" Relationship="Self.FK__Coordonat__id_st__0880433F" FromRole="Coordonate_Statie" ToRole="Tip_Statie" />
         </EntityType>
         <EntityType Name="MT">
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_unic" Type="Int32" Nullable="false" />
           <Property Name="id_tip" Type="Int32" Nullable="false" />
           <Property Name="nr_traseu" Type="Int32" Nullable="false" />
           <Property Name="nr_inmatriculare" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
@@ -483,10 +483,10 @@
           <Property Name="prenume" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CNP" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
           <Property Name="adresa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Angajats" Relationship="Self.FK_Persoana_Angajat" FromRole="Persoana" ToRole="Angajat" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Persoana_User" FromRole="Persoana" ToRole="User" />
-          <NavigationProperty Name="Tip_User" Relationship="Self.FK_TipUser_Persoana" FromRole="Persoana" ToRole="Tip_User" />
+          <NavigationProperty Name="Tip_User" Relationship="Self.FK_TipUser1_Persoana" FromRole="Persoana" ToRole="Tip_User" />
         </EntityType>
         <EntityType Name="Statie">
           <Key>
@@ -513,7 +513,7 @@
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_unic" Type="Int32" Nullable="false" />
           <Property Name="nume" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Angajats" Relationship="Self.FK_TipAngajat_Angajat" FromRole="Tip_Angajat" ToRole="Angajat" />
         </EntityType>
@@ -521,7 +521,7 @@
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_unic" Type="Int32" Nullable="false" />
           <Property Name="nume" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Bilets" Relationship="Self.FK_TipBilet_Bilet" FromRole="Tip_Bilet" ToRole="Bilet" />
         </EntityType>
@@ -531,22 +531,22 @@
           </Key>
           <Property Name="id_unic" Type="Int32" Nullable="false" />
           <Property Name="nume" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Coordonate_Statie" Relationship="Self.FK__Coordonat__id_st__41EDCAC5" FromRole="Tip_Statie" ToRole="Coordonate_Statie" />
+          <NavigationProperty Name="Coordonate_Statie" Relationship="Self.FK__Coordonat__id_st__0880433F" FromRole="Tip_Statie" ToRole="Coordonate_Statie" />
           <NavigationProperty Name="Staties" Relationship="Self.FK_Traseu_Tip_Statie" FromRole="Tip_Statie" ToRole="Statie" />
         </EntityType>
         <EntityType Name="Tip_User">
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_unic" Type="Int32" Nullable="false" />
           <Property Name="nume" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Persoanas" Relationship="Self.FK_TipUser_Persoana" FromRole="Tip_User" ToRole="Persoana" />
+          <NavigationProperty Name="Persoanas" Relationship="Self.FK_TipUser1_Persoana" FromRole="Tip_User" ToRole="Persoana" />
         </EntityType>
         <EntityType Name="TipMT">
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_unic" Type="Int32" Nullable="false" />
           <Property Name="nume" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Complaints" Relationship="Self.FK_TipMT" FromRole="TipMT" ToRole="Complaint" />
           <NavigationProperty Name="MTs" Relationship="Self.FK_TipMT_MT" FromRole="TipMT" ToRole="MT" />
@@ -555,7 +555,7 @@
           <Key>
             <PropertyRef Name="id_unic" />
           </Key>
-          <Property Name="id_unic" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_unic" Type="Int32" Nullable="false" />
           <Property Name="nume" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="MTs" Relationship="Self.FK_Traseu_MT" FromRole="Traseu" ToRole="MT" />
           <NavigationProperty Name="Staties" Relationship="Self.FK_Traseu_Statie" FromRole="Traseu" ToRole="Statie" />
@@ -656,7 +656,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Coordonat__id_st__41EDCAC5">
+        <Association Name="FK__Coordonat__id_st__0880433F">
           <End Role="Tip_Statie" Type="Self.Tip_Statie" Multiplicity="0..1" />
           <End Role="Coordonate_Statie" Type="Self.Coordonate_Statie" Multiplicity="*" />
           <ReferentialConstraint>
@@ -704,7 +704,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TipUser_Persoana">
+        <Association Name="FK_TipUser1_Persoana">
           <End Role="Tip_User" Type="Self.Tip_User" Multiplicity="1" />
           <End Role="Persoana" Type="Self.Persoana" Multiplicity="*" />
           <ReferentialConstraint>
@@ -784,7 +784,7 @@
             <End Role="User" EntitySet="Users" />
             <End Role="Complaint" EntitySet="Complaints" />
           </AssociationSet>
-          <AssociationSet Name="FK__Coordonat__id_st__41EDCAC5" Association="Self.FK__Coordonat__id_st__41EDCAC5">
+          <AssociationSet Name="FK__Coordonat__id_st__0880433F" Association="Self.FK__Coordonat__id_st__0880433F">
             <End Role="Tip_Statie" EntitySet="Tip_Statie" />
             <End Role="Coordonate_Statie" EntitySet="Coordonate_Statie" />
           </AssociationSet>
@@ -800,7 +800,7 @@
             <End Role="Persoana" EntitySet="Persoanas" />
             <End Role="User" EntitySet="Users" />
           </AssociationSet>
-          <AssociationSet Name="FK_TipUser_Persoana" Association="Self.FK_TipUser_Persoana">
+          <AssociationSet Name="FK_TipUser1_Persoana" Association="Self.FK_TipUser1_Persoana">
             <End Role="Tip_User" EntitySet="Tip_User" />
             <End Role="Persoana" EntitySet="Persoanas" />
           </AssociationSet>

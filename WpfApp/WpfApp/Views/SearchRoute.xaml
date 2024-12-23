@@ -1,85 +1,110 @@
 ﻿<Window x:Class="WpfApp.SearchRoute"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:components="clr-namespace:WpfApp.Components"
+        xmlns:viewmodels="clr-namespace:WpfApp.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:components="clr-namespace:WpfApp.Components"
-        xmlns:vm="clr-namespace:WpfApp.ViewModels"
         mc:Ignorable="d"
-        Title="Search Route" 
+        d:DataContext="{d:DesignInstance Type=viewmodels:SearchRouteViewModel, IsDesignTimeCreatable=True}"
+        Title="Search Route"
         WindowState="Maximized"
-        WindowStartupLocation="CenterScreen" >
-
-    <Window.DataContext>
-        <vm:SearchRouteViewModel />
-    </Window.DataContext>
+        WindowStartupLocation="CenterScreen">
 
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="{Binding Source={x:Static components:Resource.umbrelas}}" />
         </Grid.Background>
 
-        <!-- MapImage -->
-        <Image x:Name="MapImage" 
-               Source="{Binding Source={x:Static components:Resource.default_map_new}}"
-               Stretch="Uniform" 
-               HorizontalAlignment="Center" 
-               VerticalAlignment="Center"
-               Cursor="Hand">
-            <Image.InputBindings>
-                <MouseBinding Command="{Binding MapMouseDownCommand}"
-                              CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=MousePosition}" 
-                              Gesture="LeftClick"/>
-            </Image.InputBindings>
+        <Image x:Name="MapImage"
+        Source="{Binding Source={x:Static components:Resource.default_map_new}}"
+       Stretch="Uniform"
+       HorizontalAlignment="Center"
+       VerticalAlignment="Center"
+        MouseEnter="OnMouseEnter"
+       MouseLeave="OnMouseLeave"
+       MouseDown="OnMapImageMouseDown"
+       Cursor="{Binding Cursor}" MouseMove="OnMouseMove">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Cursor">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{Binding Cursor}" />
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
         </Image>
 
-        <!-- White Border (Side Panel) -->
-        <Border Background="White" BorderBrush="Gray" BorderThickness="1"
-                HorizontalAlignment="Right" VerticalAlignment="Top"
-                Margin="5" Width="360" Height="500"
-                CornerRadius="15">
+        <!-- blocul ala alb din dreapta -->
+        <Border Background="White" 
+        BorderBrush="Gray" 
+        BorderThickness="1"
+        HorizontalAlignment="Right" 
+        VerticalAlignment="Top"
+        Margin="5" 
+        Width="360" 
+        Height="500"
+        CornerRadius="15"
+        Padding="10">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Routes}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Foreground="Black"
+                               FontSize="14"
+                               FontWeight="Bold"
+                               Text="{Binding}"
+                               Margin="5,2,0,2" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
         </Border>
 
-        <!-- Pins Canvas -->
+
+        <!-- afisare a pin-urilor -->
         <Canvas x:Name="PinCanvas" 
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                IsHitTestVisible="False"
-                Width="{Binding ActualWidth, ElementName=MapImage}"
-                Height="{Binding ActualHeight, ElementName=MapImage}">
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            IsHitTestVisible="False"
+            Width="{Binding ActualWidth, ElementName=MapImage}"
+            Height="{Binding ActualHeight, ElementName=MapImage}">
         </Canvas>
 
-        <!-- Instruction Text -->
         <Border x:Name="InstructionBorder"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Top"
-                Background="OrangeRed"
-                CornerRadius="10"
-                Padding="10"
-                Margin="0,10,0,0">
+        HorizontalAlignment="Center"
+        VerticalAlignment="Top"
+        Background="OrangeRed"
+        CornerRadius="10"
+        Padding="10"
+        Margin="0,10,0,0">
             <TextBlock x:Name="InstructionTextBlock"
-                       FontSize="16"
-                       Foreground="DarkBlue"
-                       Text="Please select the starting location." 
-                       TextAlignment="Center"/>
+           FontSize="16"
+           Foreground="DarkBlue"
+           Text="{Binding InstructionText}"
+           TextAlignment="Center" />
+
         </Border>
 
-        <!-- Buttons -->
+
         <StackPanel Orientation="Horizontal"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    Margin="10,50,0,0">
-            <!-- ResetButton -->
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="10,50,0,0">
+            <!-- Butonul ResetButton -->
             <Button x:Name="ResetButton"
-                    Content="Reset Selection"
-                    Padding="10,5"
-                    FontSize="16"
-                    FontWeight="Bold"
-                    Foreground="White"
-                    Background="#007ACC"
-                    BorderBrush="#005F99"
-                    BorderThickness="1"
-                    Command="{Binding ResetCommand}">
+            Content="Reset Selection"
+            Padding="10,5"
+            FontSize="16"
+            FontWeight="Bold"
+            Foreground="White"
+            Background="#007ACC"
+            BorderBrush="#005F99"
+            BorderThickness="1"
+            Command="{Binding ResetCommand}">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Effect">
@@ -104,19 +129,17 @@
                 </Button.Style>
             </Button>
 
-            <!-- GenerateRouteButton -->
             <Button x:Name="GenerateRouteButton"
-                    Content="Generate my route!"
-                    Padding="10,5"
-                    FontSize="16"
-                    FontWeight="Bold"
-                    Foreground="White"
-                    Background="#007ACC"
-                    BorderBrush="#005F99"
-                    BorderThickness="1"
-                    Visibility="Collapsed"
-                    Margin="10,0,0,0"
-                    Command="{Binding GenerateRouteCommand}">
+        Content="Generate my route!"
+        Command="{Binding GenerateRouteCommand}"
+        Padding="10,5"
+        FontSize="16"
+        FontWeight="Bold"
+        Foreground="White"
+        Background="#007ACC"
+        BorderBrush="#005F99"
+        BorderThickness="1"
+        Margin="10,0,0,0">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Effect">
@@ -142,11 +165,7 @@
             </Button>
         </StackPanel>
 
-        <!-- Route Display -->
-        <StackPanel Name="RouteDisplayPanel" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Right">
-        </StackPanel>
-
-        <!-- Coordinates Text -->
+        <!-- Border to hold the coordinates TextBlock -->
         <Border Background="#FFFFFF" 
                 BorderBrush="#007ACC" 
                 BorderThickness="1" 
@@ -159,7 +178,7 @@
                        Foreground="Black"
                        FontSize="14"
                        FontWeight="Bold"
-                       Text="{Binding CoordinatesDisplay}" />
+                       Text="{Binding MousePosition}"/>
         </Border>
     </Grid>
-</Window>
+</Window>    

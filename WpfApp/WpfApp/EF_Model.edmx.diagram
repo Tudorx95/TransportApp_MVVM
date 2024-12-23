@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f20bd07a64bc45ca80adb936226f5c75" Name="Diagram1" ZoomLevel="74">
+      <Diagram DiagramId="911c662b65964acfaa5c20ef0bc09804" Name="Diagram1">
         <EntityTypeShape EntityType="TransportDBModel.Angajat" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="TransportDBModel.Bilet" Width="1.5" PointX="7.5" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TransportDBModel.Complaint" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
@@ -27,11 +27,11 @@
         <AssociationConnector Association="TransportDBModel.FK_User_Bilet" ManuallyRouted="false" />
         <AssociationConnector Association="TransportDBModel.FK_TipMT" ManuallyRouted="false" />
         <AssociationConnector Association="TransportDBModel.FK_User" ManuallyRouted="false" />
-        <AssociationConnector Association="TransportDBModel.FK__Coordonat__id_st__41EDCAC5" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportDBModel.FK__Coordonat__id_st__0880433F" ManuallyRouted="false" />
         <AssociationConnector Association="TransportDBModel.FK_TipMT_MT" ManuallyRouted="false" />
         <AssociationConnector Association="TransportDBModel.FK_Traseu_MT" ManuallyRouted="false" />
         <AssociationConnector Association="TransportDBModel.FK_Persoana_User" ManuallyRouted="false" />
-        <AssociationConnector Association="TransportDBModel.FK_TipUser_Persoana" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportDBModel.FK_TipUser1_Persoana" ManuallyRouted="false" />
         <AssociationConnector Association="TransportDBModel.FK_Traseu_Statie" ManuallyRouted="false" />
         <AssociationConnector Association="TransportDBModel.FK_Traseu_Tip_Statie" ManuallyRouted="false" />
       </Diagram>

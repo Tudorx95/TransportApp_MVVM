@@ -64,6 +64,7 @@ namespace WpfApp.ViewModels
                 ServiceUser.LoginDetails = newLoginDetails;
                 NavigationHelper.NavigateTo(typeof(Search));
             }
+            NavigationHelper.NavigateTo(typeof(Search));
         }
 
         private void RegisterButton()

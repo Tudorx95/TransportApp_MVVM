@@ -1,25 +1,125 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportAppMVVM\\WpfApp\\",
+  "WorkspaceRootPath": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportappmvvm\\wpfapp\\wpfapp\\viewmodels\\navigationbarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\viewmodels\\navigationbarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|c:\\users\\razva\\desktop\\mvvmappfinal\\transportapp_mvvm\\wpfapp\\wpfapp\\views\\searchroute.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\searchroute.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportappmvvm\\wpfapp\\wpfapp\\views\\navigationbar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\navigationbar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\searchroute.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\searchroute.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportappmvvm\\wpfapp\\wpfapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\viewmodels\\searchrouteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\viewmodels\\searchrouteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\search.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\search.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\viewmodels\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\viewmodels\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\ef_model.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\ef_model.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\ef_model.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\ef_model.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\ef_model.edmx.diagram||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\ef_model.edmx.diagram||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\ef_model.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\ef_model.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\ef_model.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\ef_model.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\model\\stationinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\model\\stationinfomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportappmvvm\\wpfapp\\wpfapp\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|c:\\users\\tudor\\onedrive\\atm\\an iii\\sem1\\administrare bd\\transportappmvvm\\wpfapp\\wpfapp\\views\\videoplayercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\navigationbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\navigationbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\model\\routedatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\model\\routedatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\ef_model.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\ef_model.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\viewmodels\\navigationbarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\viewmodels\\navigationbarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\navigationbar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\navigationbar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\wpfapp\\views\\videoplayercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E407229C-C4FE-4500-83C9-BD40CA55A2DE}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\views\\videoplayercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,76 +130,370 @@
       "DocumentGroups": [
         {
           "DockedWidth": 68,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NavigationBarViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportAppMVVM\\WpfApp\\WpfApp\\ViewModels\\NavigationBarViewModel.cs",
-              "RelativeDocumentMoniker": "WpfApp\\ViewModels\\NavigationBarViewModel.cs",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportAppMVVM\\WpfApp\\WpfApp\\ViewModels\\NavigationBarViewModel.cs",
-              "RelativeToolTip": "WpfApp\\ViewModels\\NavigationBarViewModel.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA2wB4AAAA2AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Search.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Search.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\Search.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Search.xaml",
+              "RelativeToolTip": "WpfApp\\Views\\Search.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-18T21:05:28.802Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SearchViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\ViewModels\\SearchViewModel.cs",
+              "RelativeDocumentMoniker": "WpfApp\\ViewModels\\SearchViewModel.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\ViewModels\\SearchViewModel.cs",
+              "RelativeToolTip": "WpfApp\\ViewModels\\SearchViewModel.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAQwLwAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T19:03:57.559Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T21:05:36.457Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Search.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Search.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\Search.xaml.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Search.xaml.cs",
+              "RelativeToolTip": "WpfApp\\Views\\Search.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T21:03:53.5Z",
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SearchRoute.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\SearchRoute.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\SearchRoute.xaml.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\SearchRoute.xaml.cs",
+              "RelativeToolTip": "WpfApp\\Views\\SearchRoute.xaml.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T15:27:31.021Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NavigationBar.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportAppMVVM\\WpfApp\\WpfApp\\Views\\NavigationBar.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\Views\\NavigationBar.xaml.cs",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportAppMVVM\\WpfApp\\WpfApp\\Views\\NavigationBar.xaml.cs",
-              "RelativeToolTip": "WpfApp\\Views\\NavigationBar.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T19:03:18.517Z",
-              "EditorCaption": ""
+              "Title": "SearchRoute.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\SearchRoute.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\SearchRoute.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\SearchRoute.xaml",
+              "RelativeToolTip": "WpfApp\\Views\\SearchRoute.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-19T07:26:52.943Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportAppMVVM\\WpfApp\\WpfApp\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "WpfApp\\ViewModels\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportAppMVVM\\WpfApp\\WpfApp\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "WpfApp\\ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAYwEAAAAA8AAAAAAAAAA==",
+              "Title": "SearchRouteViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\ViewModels\\SearchRouteViewModel.cs",
+              "RelativeDocumentMoniker": "WpfApp\\ViewModels\\SearchRouteViewModel.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\ViewModels\\SearchRouteViewModel.cs",
+              "RelativeToolTip": "WpfApp\\ViewModels\\SearchRouteViewModel.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAKgBAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T19:02:02.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T16:51:48.693Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
+              "Title": "EF_Model.edmx.diagram",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\EF_Model.edmx.diagram",
+              "RelativeDocumentMoniker": "WpfApp\\EF_Model.edmx.diagram",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\EF_Model.edmx.diagram",
+              "RelativeToolTip": "WpfApp\\EF_Model.edmx.diagram",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-18T21:02:39.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EF_Model.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\EF_Model.Designer.cs",
+              "RelativeDocumentMoniker": "WpfApp\\EF_Model.Designer.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\EF_Model.Designer.cs",
+              "RelativeToolTip": "WpfApp\\EF_Model.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T21:02:39.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EF_Model.Context.tt",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\EF_Model.Context.tt",
+              "RelativeDocumentMoniker": "WpfApp\\EF_Model.Context.tt",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\EF_Model.Context.tt",
+              "RelativeToolTip": "WpfApp\\EF_Model.Context.tt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-12-18T21:02:36.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\App.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\App.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\App.xaml",
+              "RelativeToolTip": "WpfApp\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-18T21:00:00.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\App.config",
+              "RelativeDocumentMoniker": "WpfApp\\App.config",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\App.config",
+              "RelativeToolTip": "WpfApp\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-12-18T21:00:05.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\ViewModels\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "WpfApp\\ViewModels\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\ViewModels\\RelayCommand.cs",
+              "RelativeToolTip": "WpfApp\\ViewModels\\RelayCommand.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAcwD0AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T14:06:30.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EF_Model.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\EF_Model.edmx",
+              "RelativeDocumentMoniker": "WpfApp\\EF_Model.edmx",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\EF_Model.edmx [Diagram1]",
+              "RelativeToolTip": "WpfApp\\EF_Model.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-12-18T21:01:51.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EF_Model.tt",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\EF_Model.tt",
+              "RelativeDocumentMoniker": "WpfApp\\EF_Model.tt",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\EF_Model.tt",
+              "RelativeToolTip": "WpfApp\\EF_Model.tt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-12-23T16:56:46.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StationInfoModel.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Model\\StationInfoModel.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Model\\StationInfoModel.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Model\\StationInfoModel.cs",
+              "RelativeToolTip": "WpfApp\\Model\\StationInfoModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:52:07.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "WpfApp\\ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "WpfApp\\ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T15:46:27.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Login.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\Login.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Login.xaml",
+              "RelativeToolTip": "WpfApp\\Views\\Login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-21T15:52:51.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Login.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportAppMVVM\\WpfApp\\WpfApp\\Views\\Login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Login.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp\\Views\\Login.xaml.cs",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportAppMVVM\\WpfApp\\WpfApp\\Views\\Login.xaml.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Login.xaml.cs",
               "RelativeToolTip": "WpfApp\\Views\\Login.xaml.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBcAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T19:01:58.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T19:01:58.685Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VideoPlayerControl.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportAppMVVM\\WpfApp\\WpfApp\\Views\\VideoPlayerControl.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\Views\\VideoPlayerControl.xaml.cs",
-              "ToolTip": "C:\\Users\\Tudor\\OneDrive\\ATM\\AN III\\sem1\\Administrare BD\\TransportAppMVVM\\WpfApp\\WpfApp\\Views\\VideoPlayerControl.xaml.cs",
-              "RelativeToolTip": "WpfApp\\Views\\VideoPlayerControl.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp\\Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-19T07:29:09.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Register.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Register.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\Register.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Register.xaml",
+              "RelativeToolTip": "WpfApp\\Views\\Register.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-21T15:34:54.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "NavigationBar.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\NavigationBar.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\NavigationBar.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\NavigationBar.xaml",
+              "RelativeToolTip": "WpfApp\\Views\\NavigationBar.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-19T07:29:25.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RouteDataModel.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Model\\RouteDataModel.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Model\\RouteDataModel.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Model\\RouteDataModel.cs",
+              "RelativeToolTip": "WpfApp\\Model\\RouteDataModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwA0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T18:59:56.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T11:49:11.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "WpfApp\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "WpfApp\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAiwEIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T19:02:02.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp\\Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAUwCMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T15:47:04.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Home.xaml",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Home.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\Home.xaml",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Home.xaml",
+              "RelativeToolTip": "WpfApp\\Views\\Home.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-21T15:52:55.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Home.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Home.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\Home.xaml.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\Home.xaml.cs",
+              "RelativeToolTip": "WpfApp\\Views\\Home.xaml.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAqwBwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T15:53:05.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "EF_Model.Context.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\EF_Model.Context.cs",
+              "RelativeDocumentMoniker": "WpfApp\\EF_Model.Context.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\EF_Model.Context.cs",
+              "RelativeToolTip": "WpfApp\\EF_Model.Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T21:02:25.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "NavigationBarViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\ViewModels\\NavigationBarViewModel.cs",
+              "RelativeDocumentMoniker": "WpfApp\\ViewModels\\NavigationBarViewModel.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\ViewModels\\NavigationBarViewModel.cs",
+              "RelativeToolTip": "WpfApp\\ViewModels\\NavigationBarViewModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAUwBcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T19:03:57.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "NavigationBar.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\NavigationBar.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\NavigationBar.xaml.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\NavigationBar.xaml.cs",
+              "RelativeToolTip": "WpfApp\\Views\\NavigationBar.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T19:03:18.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "VideoPlayerControl.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\VideoPlayerControl.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\Views\\VideoPlayerControl.xaml.cs",
+              "ToolTip": "C:\\Users\\razva\\Desktop\\MVVMAppFinal\\TransportApp_MVVM\\WpfApp\\WpfApp\\Views\\VideoPlayerControl.xaml.cs",
+              "RelativeToolTip": "WpfApp\\Views\\VideoPlayerControl.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIBZwBgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T18:59:56.012Z"
             }
           ]
         }
