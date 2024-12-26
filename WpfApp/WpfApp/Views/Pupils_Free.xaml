@@ -17,7 +17,7 @@
         <!-- StackPanel for layout -->
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <!-- TextBlock for Title -->
-            <TextBlock Text="{Binding Pupils_FreeTitle}" 
+            <TextBlock Text="{Binding Title}" 
                    FontSize="24" 
                    FontWeight="Bold" 
                    Foreground="DarkBlue" 
