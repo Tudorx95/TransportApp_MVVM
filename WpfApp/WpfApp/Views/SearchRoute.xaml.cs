@@ -1,127 +1,44 @@
 ﻿using System.Windows;
-using System.Windows.Input;
 using System.Windows.Shapes;
 using System.Windows.Media;
-using System.Collections.Generic;
-using System;
-using System.Linq;
+using WpfApp.ViewModels;
 using System.Windows.Controls;
-using WpfApp.Model;
+using System.Windows.Input;
 
 namespace WpfApp
 {
     public partial class SearchRoute : Window
     {
-        // List to hold station information
-        private List<StationInfo> stations = new List<StationInfo>();
-        private Point? startingPoint = null;
-        private Point? destinationPoint = null;
+        private SearchRouteViewModel _viewModel;
 
         public SearchRoute()
         {
             InitializeComponent();
-            MapImage.MouseEnter += MapImage_MouseEnter;
-            MapImage.MouseLeave += MapImage_MouseLeave;
+
+            // Instantiate the ViewModel and subscribe to events
+            _viewModel = new SearchRouteViewModel();
+            _viewModel.ClearPins += OnClearPins;
+            _viewModel.ShowMessage += OnShowMessage;
+            _viewModel.AddPinRequested += OnAddPinRequested;
+
+            // Set the ViewModel as the DataContext
+            DataContext = _viewModel;
         }
 
-        private void MapImage_MouseDown(object sender, MouseButtonEventArgs e)
+        // Event handler to clear the PinCanvas
+        private void OnClearPins()
         {
-            if (startingPoint == null && destinationPoint == null)
-            {
-                InstructionTextBlock.Text = "Please select the starting location.";
-            }
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                Point clickedPoint = e.GetPosition(MapImage);
-
-                if (clickedPoint.X >= 0 && clickedPoint.X <= MapImage.ActualWidth &&
-                    clickedPoint.Y >= 0 && clickedPoint.Y <= MapImage.ActualHeight)
-                {
-                    if (startingPoint == null)
-                    {
-                        ShowDistance(clickedPoint);
-                        startingPoint = clickedPoint;
-                        AddPinPoint(clickedPoint); // pin pentru plecare
-                        InstructionTextBlock.Text = "Please select the destination location.";
-                    }
-                    else if (destinationPoint == null)
-                    {
-                        ShowDistance(clickedPoint);
-                        destinationPoint = clickedPoint;
-                        AddPinPoint(clickedPoint); // pin pentru destinatie
-                        InstructionTextBlock.Text = "Both locations already selected.";
-                    }
-                    else
-                    {
-                        MessageBox.Show("Both locations already selected.");
-                        InstructionTextBlock.Text = "Both locations already selected.";
-                    }
-                }
-            }
-            // genereaza ruta 
-            if (startingPoint.HasValue && destinationPoint.HasValue)
-            {
-                GenerateRouteButton.Visibility = Visibility.Visible;
-            }
-        }
-        private void ResetSelection()
-        {
-            startingPoint = null;
-            destinationPoint = null;
             PinCanvas.Children.Clear();
-            InstructionTextBlock.Text = "Please select the starting location.";
         }
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
+
+        // Event handler to display a message
+        private void OnShowMessage(string message)
         {
-            ResetSelection();
+            MessageBox.Show(message, "Information", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        private void ShowDistance(Point clickedPoint)
-        {
-            var distances = stations
-                .Select(station => new
-                {
-                    Station = station,
-                    Distance = CalculateDistance(clickedPoint, station.Coordinates)
-                })
-                .OrderBy(x => x.Distance)
-                .Take(3) 
-                .ToList();
-
-            string message = "The 3 closest stations are:\n";
-            foreach (var item in distances)
-            {
-                message += $"{item.Station.Name} - Distance: {item.Distance:F2} km\n";
-            }
-
-            message += "\nDo you want to select this location?";
-
-            MessageBoxResult result = MessageBox.Show(message, "Confirm Location", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
-        }
-
-        private void MapImage_MouseEnter(object sender, MouseEventArgs e)
-        {
-            this.Cursor = Cursors.Cross; 
-        }
-
-        private void MapImage_MouseLeave(object sender, MouseEventArgs e)
-        {
-            this.Cursor = Cursors.Arrow;
-        }
-
-        private void MapImage_MouseMove(object sender, MouseEventArgs e)
-        {
-            Point mousePosition = e.GetPosition(MapImage);
-            CoordinatesTextBlock.Text = $"Mouse Position: {mousePosition.X:F2}, {mousePosition.Y:F2}";
-        }
-
-        private double CalculateDistance(Point p1, Point p2)
-        {
-            return Math.Round((Math.Round(Math.Sqrt(Math.Pow(p2.X - p1.X, 2) + Math.Pow(p2.Y - p1.Y, 2)), 2) * 10) / 1000, 2);
-        }
-
-        private void AddPinPoint(Point clickedPoint)
+        // Event handler to add a pin to the canvas
+        private void OnAddPinRequested(Point clickedPoint)
         {
             Ellipse pin = new Ellipse
             {
@@ -137,5 +54,31 @@ namespace WpfApp
             Canvas.SetLeft(pin, clickedPoint.X - (pin.Width / 2));
             Canvas.SetTop(pin, clickedPoint.Y - (pin.Height / 2));
         }
+        private void OnMouseMove(object sender, MouseEventArgs e)
+        {
+            var position = e.GetPosition(MapImage);
+            _viewModel.UpdateMousePosition(position);
+        }
+        private void OnMapImageMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var clickedPoint = e.GetPosition(MapImage);
+            _viewModel.OnMapMouseDown(clickedPoint);
+        }
+        private void OnMouseEnter(object sender, MouseEventArgs e)
+        {
+            if (DataContext is SearchRouteViewModel viewModel)
+            {
+                viewModel.OnMapMouseEnter();
+            }
+        }
+
+        private void OnMouseLeave(object sender, MouseEventArgs e)
+        {
+            if (DataContext is SearchRouteViewModel viewModel)
+            {
+                viewModel.OnMapMouseLeave();
+            }
+        }
+
     }
 }

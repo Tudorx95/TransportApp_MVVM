@@ -59,7 +59,6 @@ namespace WpfApp.ViewModels
                 // set connected state to true
                 LoginModel.Connected = true;
                 // navigate to search window
-                MainWindow mainWindow = new MainWindow();
                 Dictionary<string, string> newLoginDetails = new Dictionary<string, string> { { username, password } };
                 ServiceUser.LoginDetails = newLoginDetails;
                 NavigationHelper.NavigateTo(typeof(Search));

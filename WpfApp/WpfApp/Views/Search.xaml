@@ -4,109 +4,180 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:WpfApp"
-             xmlns:viewModel="clr-namespace:WpfApp.ViewModels"
-             mc:Ignorable="d"
              xmlns:components="clr-namespace:WpfApp.Components"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:viewmodel="clr-namespace:WpfApp.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodel:SearchViewModel}"
+             mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <UserControl.DataContext>
-        <!-- Bind the ViewModel here -->
-        <viewModel:SearchViewModel/>
-    </UserControl.DataContext>
-
     <Grid>
+        <!-- setam background-ul aici -->
         <Grid.Background>
             <ImageBrush ImageSource="{Binding Source={x:Static components:Resource.simple_map}}" Stretch="UniformToFill"/>
         </Grid.Background>
 
         <Canvas>
-            <!--Visibility="{Binding IsLeftImageVisible, Converter={StaticResource BoolToVisibilityConverter}}"-->                   
-            <Image x:Name="LeftImage" 
-                   Width="401" Height="562" 
-                   Canvas.Left="12" Canvas.Top="100"
-                   Visibility="{Binding IsLeftImageVisible}"
-                   Source="{Binding LeftImagePath}"
-                   Stretch="Fill"/>
+            <!-- imaginea din partea stanga -->
+            <Image x:Name="LeftImage"
+           Source="{Binding LeftImageSource}" 
+           Visibility="{Binding LeftImageVisibility}" 
+           Width="401" Height="562"
+           Stretch="Fill"
+           Canvas.Left="12" Canvas.Top="100">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonUp">
+                        <i:InvokeCommandAction Command="{Binding OpenPopupCommand}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Image>
+
+
         </Canvas>
 
-        <!-- Popup for Zoom -->
-        <Popup x:Name="ImagePopup" StaysOpen="False" Placement="Center" 
-               HorizontalOffset="0" VerticalOffset="0" IsOpen="{Binding IsPopupOpen}">
+        <!-- imaginea din stanga cu zoom -->
+        <Popup x:Name="ImagePopup"
+       IsOpen="{Binding IsPopupOpen, Mode=TwoWay}"
+       StaysOpen="False"
+       Placement="Center"
+       HorizontalOffset="0" VerticalOffset="0">
             <Border Background="Black" Opacity="0.8">
-                <Image Source="{Binding LeftImagePath}" 
-                       Width="800" Height="800" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Image Source="{Binding LeftImageSource}"
+               Width="800" Height="800"
+               HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    </Image.RenderTransform>
+                </Image>
             </Border>
         </Popup>
 
-        <!-- Search StackPanel -->
+
+        <!-- Main Center Content -->
         <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="600">
+            <!-- Discover your next ride text -->
             <TextBlock Text="Discover Your Next Ride" FontSize="30" FontWeight="Bold" Foreground="Black"
-                       HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            <!-- creearea butonului de search -->
             <Border Background="#fff" Padding="15" Width="450" Margin="0,10" CornerRadius="15">
                 <Border.Effect>
                     <DropShadowEffect Color="Gray" BlurRadius="20" ShadowDepth="2" Opacity="0.3"/>
                 </Border.Effect>
 
                 <Grid>
-                    <!-- Floating Label -->
-                    <TextBlock Text="Enter location or transport type..." 
-                               FontSize="14" Foreground="#888" VerticalAlignment="Top"
-                               Margin="15,0,0,0" 
-                               Visibility="{Binding IsFloatingLabelVisible}"/>
-                    <!--Visibility="{Binding IsFloatingLabelVisible, Converter={StaticResource BoolToVisibilityConverter}}"-->
+                    <TextBlock x:Name="FloatingLabel" Text="Enter location or transport type..." 
+                   FontSize="14" Foreground="#888" VerticalAlignment="Top" 
+                   Margin="15,0,0,0" 
+                   Visibility="{Binding FloatingLabelVisibility}" 
+                   Opacity="1">
+                        <TextBlock.RenderTransform>
+                            <TranslateTransform Y="15"/>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
 
-                    <!-- Search TextBox -->
-                    <TextBox Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}"
-                             FontSize="18" Background="Transparent" BorderThickness="0"
-                             VerticalAlignment="Center" Padding="10,15,45,15"/>
+                    <TextBox x:Name="SearchTextBox"
+                             Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                             FontSize="18"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             VerticalAlignment="Center"
+                             Padding="10,15,45,15" />
 
-                    <!-- Search Button -->
+
                     <Button Width="45" Height="45" Background="#4A90E2" Foreground="White" 
-                            HorizontalAlignment="Right" VerticalAlignment="Center" 
-                            BorderBrush="Transparent" Cursor="Hand" Margin="0,0,10,0"
-                            Command="{Binding SearchCommand}">
+                        HorizontalAlignment="Right" VerticalAlignment="Center" 
+                        BorderBrush="Transparent" Cursor="Hand" Margin="0,0,10,0" 
+                        Command="{Binding SearchCommand}">
                         <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1A3;" FontSize="20"/>
                     </Button>
                 </Grid>
             </Border>
+            <!-- lista de statii -->
+            <ListBox x:Name="SuggestionsListBox"
+                    ItemsSource="{Binding FilteredSuggestions}"
+                    SelectedItem="{Binding SelectedSuggestion, Mode=TwoWay}"/>
 
-            <!-- Suggestions List -->
-            <ListBox ItemsSource="{Binding FilteredSuggestions}"
-                     SelectedItem="{Binding SelectedSuggestion, Mode=TwoWay}"
-                     Width="450" Margin="0,5,0,0" 
-                     Visibility="Collapsed"/>
-            <!--Visibility="{Binding AreSuggestionsVisible, Converter={StaticResource BoolToVisibilityConverter}}"-->
 
             <!-- Find Path Button -->
-            <Button Content="Find path to destination" 
-                    Width="200" Height="40" Background="#4A90E2" Foreground="White"
-                    HorizontalAlignment="Center" VerticalAlignment="Top" 
-                    Margin="0,20,0,0" Cursor="Hand" 
-                    Command="{Binding FindPathCommand}"/>
+            <Button Content="Find path to destination"
+            Width="200"
+            Height="40"
+            Background="#4A90E2"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="0,20,0,0"
+            Cursor="Hand"
+            Command="{Binding OpenSearchRouteCommand}" />
+
         </StackPanel>
 
-        <!-- Route Display -->
         <Grid HorizontalAlignment="Right" VerticalAlignment="Stretch" Grid.Column="2">
+            <!-- Route Display occupying the full height from top to bottom -->
             <Border Width="500" BorderBrush="#ccc" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <!--<StackPanel x:Name="RouteDisplay" Visibility="{Binding IsRouteVisible, Converter={StaticResource BoolToVisibilityConverter}}" Orientation="Vertical" Margin="10">-->
-                <StackPanel x:Name="RouteDisplay" Visibility="{Binding IsRouteVisible}" Orientation="Vertical" Margin="10">
-                <!-- Station DataGrid -->
-                    <DataGrid ItemsSource="{Binding StationArrivals}"
-                              AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto"
-                              HorizontalScrollBarVisibility="Auto" MinHeight="300" Width="340">
+                <StackPanel x:Name="RouteDisplay" Visibility="{Binding RouteDisplayVisibility}" Orientation="Vertical" Margin="10">
+                    <!-- DataGrid to display the station data -->
+                    <DataGrid x:Name="StationsDataGrid" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Auto" MinHeight="300" Width="340" 
+                          AlternatingRowBackground="#f9f9f9"
+                          ItemsSource="{Binding Stations}"
+                          RowBackground="#ffffff"
+                          GridLinesVisibility="None"
+                          HeadersVisibility="Column"
+                          Margin="0" 
+                          FontFamily="Segoe UI"
+                          FontSize="14">
+
+                        <DataGrid.Resources>
+                            <!-- Header Style -->
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#007ACC"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Padding" Value="10,5"/>
+                            </Style>
+
+                            <!-- Cell Style -->
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Padding" Value="10"/>
+                                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                            </Style>
+                        </DataGrid.Resources>
+
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Station Name" Binding="{Binding StationName}" />
                             <DataGridTextColumn Header="Arrival Times" Binding="{Binding ArrivalTimesDisplay}" />
                         </DataGrid.Columns>
                     </DataGrid>
+                    <Border BorderBrush="#007ACC" 
+                        BorderThickness="5" 
+                        CornerRadius="10" 
+                        Background="#F0F0F0" 
+                        Margin="20" 
+                        Height="400"
+                        Padding="10">
+                        <MediaElement x:Name="Media"
+              Source="{Binding VideoSource}"
+              LoadedBehavior="Manual"
+              UnloadedBehavior="Stop"
+              Width="550"
+              Height="550"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Stretch">
+                            <i:Interaction.Triggers>
+                                <!-- Trigger for MediaEnded -->
+                                <i:EventTrigger EventName="MediaEnded">
+                                    <i:InvokeCommandAction Command="{Binding MediaEndedCommand}" 
+                                   CommandParameter="{Binding ElementName=Media}" />
+                                </i:EventTrigger>
+                                <!-- Trigger for Media Start -->
+                                <i:EventTrigger EventName="Loaded">
+                                    <i:InvokeCommandAction Command="{Binding MediaStartCommand}" 
+                                   CommandParameter="{Binding ElementName=Media}" />
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </MediaElement>
 
-                    <!-- Media Element -->
-                    <Border BorderBrush="#007ACC" BorderThickness="5" CornerRadius="10"
-                            Background="#F0F0F0" Margin="20" Height="400" Padding="10">
-                        <MediaElement Source="{Binding VideoPath}" 
-                                      LoadedBehavior="Manual" UnloadedBehavior="Stop"
-                                      MediaEnded="{Binding Media_MediaEnded}"/>
+
                     </Border>
                 </StackPanel>
             </Border>

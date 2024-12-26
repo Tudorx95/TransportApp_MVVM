@@ -9,6 +9,7 @@ namespace WpfApp.Model
 {
     public class StationInfo
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public Point Coordinates { get; set; }
     }

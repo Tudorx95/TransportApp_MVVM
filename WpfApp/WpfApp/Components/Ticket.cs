@@ -52,22 +52,32 @@ namespace WpfApp.Components
                 total_Price *= monthsDifference;
             }
         }
+        private static readonly Dictionary<Ticket_Option, string> TicketOptionMappings = new Dictionary<Ticket_Option, string>
+        {
+            { Ticket_Option.Single_Ticket, "bilet o calatorie" },
+            { Ticket_Option.Round_Trip_Ticket, "bilet dus-intors" },
+            { Ticket_Option.Monthly_Subscription, "abonament lunar" },
+            { Ticket_Option.Half_Year_Subsc, "abonament 6 luni" },
+            { Ticket_Option.Year_Subscription, "abonament 1 an" }
+        };
 
         static int Determine_Ticket_ID(Ticket_Option ticket_name)
         {
+            if (!TicketOptionMappings.TryGetValue(ticket_name, out var ticketName))
+            {
+                MessageBox.Show("Invalid ticket option.");
+                return -1;
+            }
+
+            ticketName = ticketName.ToLower();
+
             var context = new TransportDBEntities();  // Replace with your actual DataContext name
 
             try
             {
                 // Use LINQ to get the ticket matching the criteria
                 var ticket = context.Tip_Bilet
-                                    .Where(t =>
-                                           (ticket_name.Equals(Ticket_Option.Single_Ticket) && t.nume.ToLower() == "bilet o calatorie".ToLower()) ||
-                                           (ticket_name.Equals(Ticket_Option.Round_Trip_Ticket) && t.nume.ToLower() == "bilet dus-intors".ToLower()) ||
-                                           (ticket_name.Equals(Ticket_Option.Monthly_Subscription) && t.nume.ToLower() == "abonament lunar".ToLower()) ||
-                                           (ticket_name.Equals(Ticket_Option.Half_Year_Subsc) && t.nume.ToLower() == "abonament 6 luni".ToLower()) ||
-                                           (ticket_name.Equals(Ticket_Option.Year_Subscription) && t.nume.ToLower() == "abonament 1 an".ToLower())
-                                    )
+                                    .Where(t => t.nume.ToLower()==ticketName)
                                     .FirstOrDefault();  // Get the first matching ticket or null if no match found
 
                 if (ticket != null)

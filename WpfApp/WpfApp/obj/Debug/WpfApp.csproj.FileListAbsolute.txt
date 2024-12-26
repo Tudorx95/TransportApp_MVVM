@@ -33,8 +33,11 @@ C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\WpfApp.pdb
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\EntityFramework.dll
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\Microsoft.Xaml.Behaviors.dll
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\EntityFramework.xml
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\WpfApp.csproj.AssemblyReference.cache
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Complains_Request.g.cs
 C:\Users\Tudor\OneDrive\ATM\AN III\sem1\Administrare BD\TransportAppMVVM\WpfApp\WpfApp\obj\Debug\Views\Home.g.cs

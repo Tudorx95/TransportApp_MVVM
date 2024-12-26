@@ -16,7 +16,7 @@ namespace WpfApp
             // Initialize placeholders visibility
             UsernamePlaceholder.Visibility = string.IsNullOrWhiteSpace(UsernameTextBox.Text) ? Visibility.Visible : Visibility.Collapsed;
             //PasswordPlaceholder.Visibility = string.IsNullOrWhiteSpace(PasswordBox.Password) ? Visibility.Visible : Visibility.Collapsed;
-            DataContext = new LoginViewModel();
+            
         }
 
         private void UsernameTextBox_GotFocus(object sender, RoutedEventArgs e)
