@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:WpfApp"
              xmlns:components="clr-namespace:WpfApp.Components"
-             xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:viewmodel="clr-namespace:WpfApp.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodel:SearchViewModel}"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors" 
+             xmlns:model="clr-namespace:WpfApp.Model"
+             xmlns:viewmodel="clr-namespace:WpfApp.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodel:SearchViewModel}"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
 
@@ -143,6 +145,7 @@
                             </Style>
                         </DataGrid.Resources>
 
+           
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Station Name" Binding="{Binding StationName}" />
                             <DataGridTextColumn Header="Arrival Times" Binding="{Binding ArrivalTimesDisplay}" />

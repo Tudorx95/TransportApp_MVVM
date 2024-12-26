@@ -67,6 +67,7 @@
 
 
         <!-- afisare a pin-urilor -->
+        <!-- Bindings inexistente in ViewModels -->
         <Canvas x:Name="PinCanvas" 
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
