@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TransportDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TransportDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Angajat">
           <Key>
             <PropertyRef Name="id_unic" />
@@ -23,7 +23,6 @@
           <Property Name="tip_bilet" Type="int" Nullable="false" />
           <Property Name="valabilitate" Type="date" Nullable="false" />
           <Property Name="id_calator" Type="int" Nullable="false" />
-          <Property Name="nr_bilete" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Complaint">
           <Key>
@@ -408,8 +407,7 @@
             <End Role="Bilet" EntitySet="Bilet" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TransportDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -434,7 +432,6 @@
           <Property Name="tip_bilet" Type="Int32" Nullable="false" />
           <Property Name="valabilitate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="id_calator" Type="Int32" Nullable="false" />
-          <Property Name="nr_bilete" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Tip_Bilet1" Relationship="Self.FK_TipBilet_Bilet" FromRole="Bilet" ToRole="Tip_Bilet" />
           <NavigationProperty Name="User" Relationship="Self.FK_User_Bilet" FromRole="Bilet" ToRole="User" />
         </EntityType>
@@ -878,7 +875,6 @@
                 <ScalarProperty Name="tip_bilet" ColumnName="tip_bilet" />
                 <ScalarProperty Name="valabilitate" ColumnName="valabilitate" />
                 <ScalarProperty Name="id_calator" ColumnName="id_calator" />
-                <ScalarProperty Name="nr_bilete" ColumnName="nr_bilete" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

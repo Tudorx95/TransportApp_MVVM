@@ -21,7 +21,6 @@
     <Property Name="tip_bilet" Type="Int32" Nullable="false" />
     <Property Name="valabilitate" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="id_calator" Type="Int32" Nullable="false" />
-    <Property Name="nr_bilete" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Tip_Bilet1" Relationship="Self.FK_TipBilet_Bilet" FromRole="Bilet" ToRole="Tip_Bilet" />
     <NavigationProperty Name="User" Relationship="Self.FK_User_Bilet" FromRole="Bilet" ToRole="User" />
   </EntityType>

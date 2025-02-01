@@ -14,6 +14,8 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Net;
 using System.Data.Entity;
+using System.Windows.Controls.Primitives;
+using WpfApp.Components;
 
 namespace WpfApp.ViewModels
 {
@@ -31,6 +33,184 @@ namespace WpfApp.ViewModels
         private string _mousePosition;
         private ObservableCollection<string> _routes;
 
+
+
+        private bool _isRouteGenerated;
+        public bool IsRouteGenerated
+        {
+            get => _isRouteGenerated;
+            set
+            {
+                if (_isRouteGenerated != value)
+                {
+                    _isRouteGenerated = value;
+                    OnPropertyChanged(nameof(IsRouteGenerated));
+                    OnPropertyChanged(nameof(ShowGoButton));
+                }
+            }
+        }
+
+        private bool _isGoButtonClicked;
+        public bool IsGoButtonClicked
+        {
+            get => _isGoButtonClicked;
+            set
+            {
+                if (_isGoButtonClicked != value)
+                {
+                    _isGoButtonClicked = value;
+                    OnPropertyChanged(nameof(IsGoButtonClicked));
+                    OnPropertyChanged(nameof(ShowGoButton));
+                }
+            }
+        }
+
+        public bool ShowGoButton => IsRouteGenerated && !IsGoButtonClicked;
+
+        public ObservableCollection<string> AvailableAttributes { get; set; } = new ObservableCollection<string>();
+
+        private void LoadAvailableAttributes()
+        {
+            Ticket.RemoveOldTickets();
+            AvailableAttributes.Clear();
+            using (var context = new TransportDBEntities())
+            {
+                // Query all ticket types from the Tip_Bilet table.
+                var ticketOptions = context.Tip_Bilet.ToList();
+
+                // Create a dictionary to map ticket types dynamically from the database.
+                var TicketOptionMappings = new Dictionary<int, string>();
+
+                foreach (var ticket in ticketOptions)
+                {
+                    TicketOptionMappings[ticket.id_unic] = ticket.nume;
+                }
+
+                // detect only those types that are available for the current user
+                int id_user = ServiceUser.getUserID();
+                int val=_dbContext.Bilets.Where(p=> p.id_calator.Equals(id_user) && p.tip_bilet==1).Count();
+                if(val==0)
+                {
+                    TicketOptionMappings.Remove(1);
+                }
+                val = _dbContext.Bilets.Where(p => p.id_calator.Equals(id_user) && p.tip_bilet == 2).Count();
+                if (val == 0)
+                {
+                    TicketOptionMappings.Remove(2);
+                }
+                val = _dbContext.Bilets.Where(p => p.id_calator.Equals(id_user) && p.tip_bilet == 3).Count();
+                if (val == 0)
+                {
+                    TicketOptionMappings.Remove(3);
+                }
+                val = _dbContext.Bilets.Where(p => p.id_calator.Equals(id_user) && p.tip_bilet == 4).Count();
+                if (val == 0)
+                {
+                    TicketOptionMappings.Remove(4);
+                }
+                val = _dbContext.Bilets.Where(p => p.id_calator.Equals(id_user) && p.tip_bilet == 5).Count();
+                if (val == 0)
+                {
+                    TicketOptionMappings.Remove(5);
+                }
+
+                // Extract values and add them to AvailableAttributes collection
+                foreach (var mapping in TicketOptionMappings.Values)
+                {
+                    AvailableAttributes.Add(mapping);
+                }
+            }
+        }
+
+        private string _selectedAttribute;
+        public string SelectedAttribute
+        {
+            get => _selectedAttribute;
+            set { _selectedAttribute = value; OnPropertyChanged(); }
+        }
+        public ICommand GoButtonCommand { get; }
+        public ICommand UseTicketCommand { get; }
+        private void GoButtonClicked()
+        {
+            // Action to take when GO button is clicked
+            IsGoButtonClicked = true;
+        }
+
+        private void UseTicketClicked()
+        {
+            // Ensure a ticket attribute has been selected.
+            if (string.IsNullOrWhiteSpace(SelectedAttribute))
+            {
+                MessageBox.Show("Please select a ticket attribute before using a ticket.");
+                return;
+            }
+
+            // Mapping from the ticket attribute string (from AvailableAttributes)
+            // to the corresponding integer value stored in the database for tip_bilet.
+            //var ticketMapping = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase)
+            //{
+            //    { "Single Ticket", 1 },
+            //    { "Round-trip Ticket", 2 },
+            //    { "Monthly Subscription", 3 },
+            //    { "6 Months Year Subscription", 4 },
+            //    { "1 Year Subscription", 5 }
+            //};
+
+            //// Try to get the ticket type integer corresponding to the selected attribute.
+            //if (!ticketMapping.TryGetValue(SelectedAttribute, out int ticketType))
+            //{
+            //    MessageBox.Show("Selected ticket attribute is not recognized.");
+            //    return;
+            //}
+
+            // Get the current user ID (ensure this returns a valid ID).
+            int userId = ServiceUser.getUserID();
+
+            try
+            {
+                using (var context = new TransportDBEntities())
+                {
+                    var ticketTypeEntry = context.Tip_Bilet
+                    .FirstOrDefault(t => t.nume.Equals(SelectedAttribute, StringComparison.OrdinalIgnoreCase));
+
+                    if (ticketTypeEntry == null)
+                    {
+                        MessageBox.Show("Selected ticket attribute is not recognized.");
+                        return;
+                    }
+
+                    int ticketType = ticketTypeEntry.id_unic;
+                    // Find the first ticket for the current user with the matching ticket type.
+                    var ticketToDelete = context.Bilets
+                        .FirstOrDefault(t => t.tip_bilet == ticketType && t.id_calator == userId);
+
+                    if (ticketToDelete != null)
+                    {
+                        // Remove the ticket from the context and save changes.
+                        if (ticketToDelete.tip_bilet == 2)  // single ticket in DB
+                        {
+                            MessageBox.Show("Ticket deleted!");
+                            context.Bilets.Remove(ticketToDelete);
+                            context.SaveChanges();
+                            LoadAvailableAttributes();
+                        }
+                        MessageBox.Show("Ticket used successfully",
+                                        "Ticket Used", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No ticket of the selected type was found for removal.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error using ticket: " + ex.Message);
+            }
+
+            // Optionally, reset the GO button state after using the ticket.
+            IsGoButtonClicked = false;
+        }
         public ObservableCollection<StationInfo> Stations
         {
             get => _stations;
@@ -131,13 +311,6 @@ namespace WpfApp.ViewModels
 
 
 
-
-
-
-
-
-
-
         //initial stuff
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -159,7 +332,17 @@ namespace WpfApp.ViewModels
             Cursor = Cursors.Arrow;
             GenerateRouteCommand = new RelayCommand(argv => GenerateRoute());
             Routes = new ObservableCollection<string>();
+
+            GoButtonCommand = new RelayCommand(param => ToggleGoButton());
+            UseTicketCommand = new RelayCommand(param => UseTicketClicked());
+            LoadAvailableAttributes();
         }
+
+        private void ToggleGoButton()
+        {
+            IsGoButtonClicked = true; // Show ComboBox
+        }
+       
         private async void LoadStations()
         {
             // Fetch station data asynchronously
@@ -339,6 +522,8 @@ namespace WpfApp.ViewModels
 
             double walkingDistance = CalculateDistance(StartingPoint.Value, DestinationPoint.Value);
             Routes.Add($"Walking Distance: {walkingDistance:F2} km");
+
+            IsRouteGenerated = true;
         }
         private List<StationInfo> FindBestRoute(string startStationName, string endStationName)
         {

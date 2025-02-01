@@ -18,7 +18,6 @@
     <Property Name="tip_bilet" Type="int" Nullable="false" />
     <Property Name="valabilitate" Type="date" Nullable="false" />
     <Property Name="id_calator" Type="int" Nullable="false" />
-    <Property Name="nr_bilete" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Complaint">
     <Key>

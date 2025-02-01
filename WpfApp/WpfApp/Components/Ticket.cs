@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace WpfApp.Components
 {
-    internal class Ticket
+    public class Ticket
     {
         public int ticket_count;
         public double ticket_price;
@@ -51,11 +51,19 @@ namespace WpfApp.Components
 
                 total_Price *= monthsDifference;
             }
+            if(ticket_opt==Ticket_Option.Single_Ticket)
+            {
+                ticket_date=DateTime.Now.AddDays(1);
+            }
+            if(ticket_opt==Ticket_Option.Round_Trip_Ticket)
+            {
+                ticket_date = DateTime.Now.AddDays(2);
+            }
         }
         private static readonly Dictionary<Ticket_Option, string> TicketOptionMappings = new Dictionary<Ticket_Option, string>
         {
-            { Ticket_Option.Single_Ticket, "bilet o calatorie" },
-            { Ticket_Option.Round_Trip_Ticket, "bilet dus-intors" },
+            { Ticket_Option.Single_Ticket, "Bilet o calatorie" },
+            { Ticket_Option.Round_Trip_Ticket, "Bilet dus-intors" },
             { Ticket_Option.Monthly_Subscription, "abonament lunar" },
             { Ticket_Option.Half_Year_Subsc, "abonament 6 luni" },
             { Ticket_Option.Year_Subscription, "abonament 1 an" }
@@ -111,32 +119,69 @@ namespace WpfApp.Components
 
 
             var context = new TransportDBEntities();  // Replace with your actual DataContext name
+            bool subm_success = true;
+            for (int i = 0; i < ticket_count; i++)
+            {
+                try
+                {
+                    // Create a new Bilet entity
+                    var newTicket = new Bilet
+                    {
+                        tip_bilet = id_ticket,  // Use the determined ticket ID
+                        valabilitate = ticket_date.Date,  // Format the date as needed
+                        id_calator = id_user,  // User ID
+                                               //nr_bilete = ticket_count  // Number of tickets
+                    };
 
+                    // Add the new ticket to the context
+                    context.Bilets.Add(newTicket);
+
+                    // Submit changes to the database
+                    context.SaveChanges();
+
+                    // Show success message
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}\n\n{ex.InnerException?.Message}");
+                    subm_success = false;
+                }
+            }
+            if(subm_success)
+                    MessageBox.Show("Ticket/s successfully added.");
+        }
+    
+        static public void RemoveOldTickets()
+        {
+            int id_user = ServiceUser.getUserID();
+            DateTime currentDate = DateTime.Now.Date;
 
             try
             {
-                // Create a new Bilet entity
-                var newTicket = new Bilet
+                using (var context = new TransportDBEntities())
                 {
-                    tip_bilet = id_ticket,  // Use the determined ticket ID
-                    valabilitate = ticket_date.Date,  // Format the date as needed
-                    id_calator = id_user,  // User ID
-                    nr_bilete = ticket_count  // Number of tickets
-                };
+                    // Find tickets for the current user that have an old 'valabilitate' (validity date)
+                    var oldTickets = context.Bilets
+                        .Where(t => t.id_calator == id_user && t.valabilitate < currentDate)
+                        .ToList();
 
-                // Add the new ticket to the context
-                context.Bilets.Add(newTicket);
-
-                // Submit changes to the database
-                context.SaveChanges();
-
-                // Show success message
-                MessageBox.Show("Ticket successfully added.");
+                    // Remove the old tickets
+                    if (oldTickets.Any())
+                    {
+                        context.Bilets.RemoveRange(oldTickets);
+                        context.SaveChanges();  // Save the changes to the database
+                        //MessageBox.Show("Old tickets removed successfully.");
+                    }
+                    else
+                    {
+                        //MessageBox.Show("No old tickets to remove.");
+                    }
+                }
             }
             catch (Exception ex)
             {
-                // Handle any exceptions that may occur during insertion
-                MessageBox.Show($"Error while adding the ticket: {ex.Message}");
+                // Handle any exceptions
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
     }

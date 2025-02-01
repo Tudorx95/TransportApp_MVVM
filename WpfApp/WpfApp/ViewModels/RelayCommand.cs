@@ -12,10 +12,17 @@ namespace WpfApp.ViewModels
         private readonly Action<object> _execute;
         private readonly Predicate<object> _canExecute;
 
+        public Action ToggleGoButton { get; }
+
         public RelayCommand(Action<object> execute, Predicate<object> canExecute = null)
         {
             _execute = execute ?? throw new ArgumentNullException(nameof(execute));
             _canExecute = canExecute;
+        }
+
+        public RelayCommand(Action toggleGoButton)
+        {
+            ToggleGoButton = toggleGoButton;
         }
 
         public bool CanExecute(object parameter)

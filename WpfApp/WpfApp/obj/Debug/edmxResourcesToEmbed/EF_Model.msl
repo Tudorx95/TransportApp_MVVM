@@ -19,7 +19,6 @@
           <ScalarProperty Name="tip_bilet" ColumnName="tip_bilet" />
           <ScalarProperty Name="valabilitate" ColumnName="valabilitate" />
           <ScalarProperty Name="id_calator" ColumnName="id_calator" />
-          <ScalarProperty Name="nr_bilete" ColumnName="nr_bilete" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

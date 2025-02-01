@@ -83,7 +83,6 @@ namespace WpfApp.ViewModels
 
             if (ServiceUser.RegisterUser(FirstName, LastName, Email, Username, Password))
             {
-                MessageBox.Show("Registration successful!");
                 NavigationHelper.NavigateTo(typeof(Login));
             }
             else
